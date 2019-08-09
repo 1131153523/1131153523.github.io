@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://1131153523.github.io</id>
-    <title>Fan&apos;s blog</title>
-    <updated>2019-08-09T15:33:07.491Z</updated>
+    <title>         Fan&apos;s blog</title>
+    <updated>2019-08-09T15:33:17.851Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://1131153523.github.io"/>
     <link rel="self" href="https://1131153523.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://1131153523.github.io/images/avatar.png</logo>
     <icon>https://1131153523.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, Fan&apos;s blog</rights>
+    <rights>All rights reserved 2019,          Fan&apos;s blog</rights>
     <entry>
         <title type="html"><![CDATA[逐行级源码分析系列(一) Vuex]]></title>
         <id>https://1131153523.github.io/post/zhu-xing-ji-yuan-ma-fen-xi-xi-lie-yi-vuex</id>
