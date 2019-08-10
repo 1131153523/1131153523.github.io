@@ -974,29 +974,4 @@ td {
       font-size: 15px!important;
 }
 
-.post a:first-child {
-    display: flex;
-    justify-content: center;
-}
-.post a:first-child .post-title {
-  display: inline-block;
-  margin: 15px auto;
-  position: relative;
-}
-.post a:first-child .post-title::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: #0087ca;
-  transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
-}
-.post a:first-child .post-title:hover::after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
     
