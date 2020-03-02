@@ -1,114 +1,95 @@
-<html>
 
-<head>
-    <meta charset="utf-8" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>
-    逐行级源码分析系列(二)  Redux和React-Redux源码 | 
-</title>
-<link rel="shortcut icon" href="https://FanYH-tql.github.io/favicon.ico?v=1583153684859">
-<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
-<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>逐行级源码分析系列(二)  Redux和React-Redux源码 | </title>
+<meta name="description" content="温故而知新">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://FanYH-tql.github.io/favicon.ico?v=1583153755176">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://FanYH-tql.github.io/styles/main.css">
-<!-- js -->
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://FanYH-tql.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
-        
-            
-                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-                
 
-                    
-                            
-</head>
-
-<body>
-    <div class="main">
-        <div class="header">
-    <div class="nav">
-        <div class="logo">
-            <a href="https://FanYH-tql.github.io">
-                <img class="avatar" src="https://FanYH-tql.github.io/images/avatar.png?v=1583153684859" alt="">
-            </a>
-            <div class="site-title">
-                <h1>
-                    
-                </h1>
-            </div>
-        </div>
-        <span class="menu-btn fa fa-align-justify"></span>
-        <div class="menu-container">
-            <ul>
-                
-                    
-                            <li>
-                                <a href="/" class="menu">
-                                    首页
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/archives" class="menu">
-                                    归档
-                                </a>
-                            </li>
-                            
-                                
-                    
-                            <li>
-                                <a href="/tags" class="menu">
-                                    标签
-                                </a>
-                            </li>
-                            
-                                
-            </ul>
-        </div>
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://FanYH-tql.github.io">
+        <img class="avatar" src="https://FanYH-tql.github.io/images/avatar.png?v=1583153755176" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://FanYH-tql.github.io">
+        <h1 class="site-title"></h1>
+      </a>
     </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
 </div>
 
-<script>
-    $(document).ready(function() {
-        $(".menu-btn").click(function() {
-            $(".menu-container").slideToggle();
-        });
-        $(window).resize(function() {
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
 
-            if (window.matchMedia('(min-width: 960px)').matches) {
-                $(".menu-container").css('display', 'block')
-            } else {
-                $(".menu-container").css('display', 'none')
-            }
 
-        });
-    });
-</script>
-
-            <div id="main-content" class="post-detail main-container">
-                <!-- left -->
-                <div id="content" class="main-container-left">
-                    <article class="post i-card">
-                        <h2 class="post-title">
-                            逐行级源码分析系列(二)  Redux和React-Redux源码
-                        </h2>
-                        <div class="post-info">
-                            <time class="post-time">2019-08-10</time>
-                            
-                        </div>
-                        
-                            <div class="post-feature-image" style="background-image: url('https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67')"></div>
-                            
-                                <div class="post-content">
-                                    <h2 id="前言">前言</h2>
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67')">
+            </div>
+          
+          <h2 class="post-title">逐行级源码分析系列(二)  Redux和React-Redux源码</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2019-08-10</span>
+            
+          </div>
+          <div class="post-content">
+            <h2 id="前言">前言</h2>
 <p>因为最近忙于秋招，平时只是花费空闲时间来写这篇博客，所以有些地方可能讲的不是很好，也不详细，现在看来不知道算不算是逐行了，希望大家能谅解，我一定会坚持写完这个系列。。</p>
 <p>万字长文，大家谨慎观看</p>
 <h2 id="系列文章">系列文章</h2>
@@ -2729,181 +2710,86 @@ export function useReduxContext() {
 <h2 id="下一章">下一章</h2>
 <p>逐行级源码分析系列(三) Vue-Router源码</p>
 
-                                </div>
-                    </article>
-                    <!--  -->
-                    
-                        <div class="next-post">
-                            <div class="next">下一篇</div>
-                            <a href="https://FanYH-tql.github.io/post/zhu-xing-ji-yuan-ma-fen-xi-xi-lie-yi-vuex/">
-                                <h3 class="post-title">
-                                    逐行级源码分析系列(一) Vuex
-                                </h3>
-                            </a>
-                        </div>
-                        
-                            <div id="disqus_thread"></div>
-                            <div id="gitalk-container"></div>
-                </div>
-                <!-- middle -->
-                <div class="main-container-middle"></div>
-                <!-- right -->
-                <div id="sidebar" class="main-container-right">
-                    
-                        <!-- toc -->
-                        
-    <div class="toc-card i-card ">
-        <div class="toc-title i-card-title">目录</div>
-        <div class="toc-content">
-            <ul class="markdownIt-TOC">
-<li>
-<ul>
-<li><a href="#%E5%89%8D%E8%A8%80">前言</a></li>
-<li><a href="#%E7%B3%BB%E5%88%97%E6%96%87%E7%AB%A0">系列文章</a></li>
-<li><a href="#redux">Redux</a>
-<ul>
-<li><a href="#%E4%B8%80%E4%B8%AA%E4%BE%8B%E5%AD%90">一个例子</a></li>
-<li><a href="#%E5%85%A5%E5%8F%A3">入口</a></li>
-<li><a href="#createstore">createStore</a>
-<ul>
-<li><a href="#getstate">getState</a></li>
-<li><a href="#subscribe">subscribe</a></li>
-<li><a href="#dispatch">dispatch</a></li>
-<li><a href="#replacereducer">replaceReducer</a></li>
-<li><a href="#observable">observable</a></li>
-</ul>
-</li>
-<li><a href="#bindactioncreators">bindActionCreators</a></li>
-<li><a href="#combinereducers">combineReducers</a></li>
-<li><a href="#applymiddleware">applyMiddleware</a></li>
-<li><a href="#compose">compose</a></li>
-<li><a href="#logger%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%AE%9E%E7%8E%B0">logger中间件实现</a></li>
-<li><a href="#redux-thunk%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%AE%9E%E7%8E%B0">redux-thunk中间件实现</a></li>
-<li><a href="#redux-promise%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%AE%9E%E7%8E%B0">redux-promise中间件实现</a></li>
-</ul>
-</li>
-<li><a href="#react-redux">React-Redux</a>
-<ul>
-<li><a href="#batch">batch</a></li>
-<li><a href="#provider">Provider</a>
-<ul>
-<li><a href="#createlistenercollection">createListenerCollection</a>
-<ul>
-<li><a href="#1notify">1.notify</a></li>
-<li><a href="#2subscribe">2.subscribe</a></li>
-<li><a href="#3get">3.get</a></li>
-<li><a href="#4clear">4.clear</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#connectadvanced">connectAdvanced</a>
-<ul>
-<li><a href="#%E5%8F%82%E6%95%B0">参数</a></li>
-<li><a href="#%E8%BF%94%E5%9B%9E%E5%80%BC">返回值</a>
-<ul>
-<li><a href="#%E9%9D%99%E6%80%81%E5%B1%9E%E6%80%A7">静态属性</a></li>
-<li><a href="#%E9%9D%99%E6%80%81%E5%87%BD%E6%95%B0">静态函数</a></li>
-<li><a href="#%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95">实例方法</a></li>
-</ul>
-</li>
-<li><a href="#%E6%B3%A8%E6%84%8F">注意</a></li>
-<li><a href="#wrapwithconnect">wrapWithConnect</a></li>
-<li><a href="#connectfunction">ConnectFunction</a></li>
-</ul>
-</li>
-<li><a href="#connect">connect</a>
-<ul>
-<li><a href="#mapstatetoprops">mapStateToProps</a></li>
-<li><a href="#mapdispatchtoprops">mapDispatchToProps</a></li>
-<li><a href="#mergeprops">mergeProps</a></li>
-</ul>
-</li>
-<li><a href="#usestore">useStore</a></li>
-<li><a href="#usedispatch">useDispatch</a></li>
-<li><a href="#useselector">useSelector</a></li>
-</ul>
-</li>
-<li><a href="#%E6%80%BB%E7%BB%93">总结</a></li>
-<li><a href="#%E4%B8%8B%E4%B8%80%E7%AB%A0">下一章</a></li>
-</ul>
-</li>
-</ul>
-
+          </div>
         </div>
-        <script>
-            function locateCatelogList() {
-                /*获取文章目录集合,可通过:header过滤器*/
-                var alis = $('.post-content :header');
-                /*获取侧边栏目录列表集合**/
-                var sidebar_alis = $('.markdownIt-TOC a');
-                /*获取滚动条到顶部的距离*/
-                var scroll_height = $(window).scrollTop();
-                for (var i = 0; i < alis.length; i++) {
-                    /*获取锚点集合中的元素分别到顶点的距离*/
-                    var a_height = $(alis[i]).offset().top;
-                    if (a_height < scroll_height) {
-                        /*高亮显示*/
-                        sidebar_alis.removeClass('on');
-                        $(sidebar_alis[i]).addClass('on');
-                    }
-                }
-            }
-            $(function() {
-                /*绑定滚动事件 */
-                $(window).bind('scroll', locateCatelogList);
-            });
-        </script>
-    </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://FanYH-tql.github.io/post/zhu-xing-ji-yuan-ma-fen-xi-xi-lie-yi-vuex/">
+              <h3 class="post-title">
+                下一篇：逐行级源码分析系列(一) Vuex
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+        
+          <div id="gitalk-container"></div>
+        
+
+        
+      
+
+      <div class="site-footer">
+  <div class="slogan">温故而知新</div>
+  <div class="social-container">
     
-                            
-
-                </div>
-
-
-
-
-            </div>
-
-
-            <div class="site-footer">
-   | 
-  <a class="rss" href="https://FanYH-tql.github.io/atom.xml" target="_blank">RSS</a>
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+   | <a class="rss" href="https://FanYH-tql.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-<script>
-  hljs.initHighlightingOnLoad()
-</script>
-
 
     </div>
-    <script>
-        $('#sidebar').stickySidebar({
-            topSpacing: 80,
-            // bottomSpacing: 60
-        });
-    </script>
-    
-        
-            <script>
-    window.onload = function() {
-        var gitalk = new Gitalk({
-            clientID: '3f095dc7caed6dad1561',
-            clientSecret: 'b6ccfd57b551f8c2d30e2bc5bcad2b1df5b23dc9',
-            repo: '1131153523.github.io',
-            owner: '1131153523',
-            admin: ['1131153523'],
-            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
-            distractionFreeMode: false // Facebook-like distraction free mode
-        })
+    <script type="application/javascript">
 
-        gitalk.render('gitalk-container')
-    }
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
 </script>
-                
 
-                    
-                                
-</body>
 
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '3f095dc7caed6dad1561',
+        clientSecret: 'b6ccfd57b551f8c2d30e2bc5bcad2b1df5b23dc9',
+        repo: '1131153523.github.io',
+        owner: '1131153523',
+        admin: ['1131153523'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
 </html>
