@@ -2,18 +2,18 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://1131153523.github.io</id>
     <title></title>
-    <updated>2019-08-10T06:46:12.661Z</updated>
+    <updated>2020-03-02T12:45:59.884Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://1131153523.github.io"/>
     <link rel="self" href="https://1131153523.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://1131153523.github.io/images/avatar.png</logo>
     <icon>https://1131153523.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, </rights>
+    <rights>All rights reserved 2020, </rights>
     <entry>
         <title type="html"><![CDATA[逐行级源码分析系列(二)  Redux和React-Redux源码]]></title>
-        <id>https://1131153523.github.io/post/3QTzMfYA8</id>
-        <link href="https://1131153523.github.io/post/3QTzMfYA8">
+        <id>https://1131153523.github.io/post/3QTzMfYA8/</id>
+        <link href="https://1131153523.github.io/post/3QTzMfYA8/">
         </link>
         <updated>2019-08-10T03:29:05.000Z</updated>
         <content type="html"><![CDATA[<h2 id="前言">前言</h2>
@@ -951,7 +951,7 @@ const userState = state.user
 </li>
 <li>
 <p>洋葱模型</p>
-<p><img src="C:%5CUsers%5C86176%5CDesktop%5C2474077171-5ab493c984bf8_articlex.png" alt=""></p>
+<figure data-type="image" tabindex="1"><img src="C:%5CUsers%5C86176%5CDesktop%5C2474077171-5ab493c984bf8_articlex.png" alt="" loading="lazy"></figure>
 <p>大家把洋葱的中心想象成<code>dispatch</code>函数，后面大家会明白</p>
 </li>
 <li>
@@ -961,7 +961,7 @@ const userState = state.user
 <p>以上三者是什么，大家如果有不知道的，希望可以查一下方便大家理解</p>
 <p>总的来说这个函数所作的事情，就是把一个函数的返回值，作为另一个函数的参数，不断地迭代</p>
 <p>在<code>redux</code>的角度来讲：对<code>dispatch</code>进行了一层层的包装，有点像装饰器，我再画一张图方便理解</p>
-<p><img src="C:%5CUsers%5C86176%5CDesktop%5CQQ%E6%88%AA%E5%9B%BE20190727011616.png" alt=""></p>
+<figure data-type="image" tabindex="2"><img src="C:%5CUsers%5C86176%5CDesktop%5CQQ%E6%88%AA%E5%9B%BE20190727011616.png" alt="" loading="lazy"></figure>
 <p>如果我们有使用中间件，我们拿到的<code>dispatch</code>实际上是被包装后的<code>dispatch</code>，对于<code>compose</code>的代码，希望大家多看几遍</p>
 <h3 id="logger中间件实现">logger中间件实现</h3>
 <pre><code class="language-javascript">const logger1 = function({ dispatch, getState }) {
@@ -2640,8 +2640,8 @@ export function useReduxContext() {
     </entry>
     <entry>
         <title type="html"><![CDATA[逐行级源码分析系列(一) Vuex]]></title>
-        <id>https://1131153523.github.io/post/zhu-xing-ji-yuan-ma-fen-xi-xi-lie-yi-vuex</id>
-        <link href="https://1131153523.github.io/post/zhu-xing-ji-yuan-ma-fen-xi-xi-lie-yi-vuex">
+        <id>https://1131153523.github.io/post/zhu-xing-ji-yuan-ma-fen-xi-xi-lie-yi-vuex/</id>
+        <link href="https://1131153523.github.io/post/zhu-xing-ji-yuan-ma-fen-xi-xi-lie-yi-vuex/">
         </link>
         <updated>2019-08-09T15:08:13.000Z</updated>
         <content type="html"><![CDATA[<h2 id="前言">前言</h2>

@@ -1,177 +1,4666 @@
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8" />
+<meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title></title>
-<meta name="description" content="温故而知新" />
-<link rel="shortcut icon" href="https://1131153523.github.io/favicon.ico?v=1565419570501">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<title>
+    
+</title>
+<link rel="shortcut icon" href="https://1131153523.github.io/favicon.ico?v=1583153064508">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://1131153523.github.io/styles/main.css">
-
+<!-- js -->
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://1131153523.github.io/media/js/jquery.sticky-sidebar.min.js"></script>
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
 
+</head>
 
-  </head>
-  <body>
+<body>
     <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://1131153523.github.io">
-  <img class="avatar" src="https://1131153523.github.io/images/avatar.png?v=1565419570501" alt="">
-  </a>
-  <h1 class="site-title">
-    
-  </h1>
-  <p class="site-description">
-    温故而知新
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://1131153523.github.io">
+                <img class="avatar" src="https://1131153523.github.io/images/avatar.png?v=1583153064508" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+            </ul>
+        </div>
+    </div>
 </div>
 
-    
-        <div class="post-container">
-  
-    <article class="post">
-      <a href="https://1131153523.github.io/post/3QTzMfYA8">
-        <h2 class="post-title">逐行级源码分析系列(二)  Redux和React-Redux源码</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2019-08-10
-        </span>
-        <span>
-          34 min read
-        </span>
-        
-      </div>
-      
-        <a href="https://1131153523.github.io/post/3QTzMfYA8" class="post-feature-image" style="background-image: url('https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67')">
-        </a>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-    <article class="post">
-      <a href="https://1131153523.github.io/post/zhu-xing-ji-yuan-ma-fen-xi-xi-lie-yi-vuex">
-        <h2 class="post-title">逐行级源码分析系列(一) Vuex</h2>
-      </a>
-      <div class="post-info">
-        <span>
-          2019-08-09
-        </span>
-        <span>
-          26 min read
-        </span>
-        
-          <a href="https://1131153523.github.io/tag/Xi1f-fGA_2" class="post-tag">
-            # Vue
-          </a>
-        
-      </div>
-      
-        <a href="https://1131153523.github.io/post/zhu-xing-ji-yuan-ma-fen-xi-xi-lie-yi-vuex" class="post-feature-image" style="background-image: url('https://vuex.vuejs.org/flow.png')">
-        </a>
-      
-      <div class="post-abstract">
-        
-      </di>
-    </article>
-  
-</div>
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
 
-    
-        <div class="pagination-container">
-  
-  
-</div>
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
 
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-container main-container">
+                <div id="content" class="main-container-left">
+                    
+        
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://1131153523.github.io/post/3QTzMfYA8/">
+                        逐行级源码分析系列(二)  Redux和React-Redux源码
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-08-10</time>
+                    
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://1131153523.github.io/post/3QTzMfYA8/" class="post-feature-image" style="background-image:url(https://camo.githubusercontent.com/f28b5bc7822f1b7bb28a96d8d09e7d79169248fc/687474703a2f2f692e696d6775722e636f6d2f4a65567164514d2e706e67) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            前言
+因为最近忙于秋招，平时只是花费空闲时间来写这篇博客，所以有些地方可能讲的不是很好，也不详细，现在看来不知道算不算是逐行了，希望大家能谅解，我一定会坚持写完这个系列。。
+万字长文，大家谨慎观看
+系列文章
+
+逐行级源码分析系列(一) Vuex
+逐行级源码分析系列(二)  Redux和React-Redux源码
+逐行级源码分析系列(三) Vue-Router源码
+逐行级源码分析系列(四) React-Router-Dom源码
+逐行级源码分析系列(五) Express源码
+逐行级源码分析系列(六) Koa核心源码
+逐行级源码分析系列(六) Typescript版Axios源码
+
+Redux
+一个例子
+在看redux源码前，必须要理解的是发布订阅模式，下面我会用一个例子来实现一个简易版redux,方便大家理解
+
+const reducer = function(state = { count: 1 }, action) {
+    switch(action.type) {
+        case &#39;INCREMENT&#39;:
+            return {
+                ...state,
+                count: count + 1
+            }
+        default:
+            return state
+    }
+}
+
+const createStore = function(reducer, preloadedState) {
+    // 监听者数组
+    const listeners = []
+    // 如果有设置好的state,设置当前state
+    let currentState = preloadedState
+    const subscribe = function(fn) {
+        listeners.push(fn)
+        // 返回一个能取消订阅的函数
+        return function() {
+            const index = listeners.indexOf(fn)
+            listeners.splice(index, 1)
+        }
+    }
+    // 获取当前state
+    const getState = function() {
+        return currentState
+    }
     
-        <div class="site-footer">
+    const dispatch = function(action) {
+        // 调用reducer，将新的state,替换掉当前的state
+    	currentState = reducer(currentState, action)
+        // 循环调用监听函数
+        for (let i = 0;i &amp;lt; listeners.length;i++) {
+            let listener = listeners[i]
+            listener()
+        }
+        return action
+    }
+    // 初始化
+    dispatch({ type: ActionTypes.INIT })
+    return {
+        getState,
+        subscribe,
+        dispatch
+    }
+}
+
+在react中使用
+const store = createStore(reducer)
+class App extends React.Component {
+    constructor(props) {
+        super(props)
+        this.state = {
+            store,
+            count: 1
+        }
+    }
+    componentWillMount() {
+        // 当点击按钮之后，调用dispatch更新状态，然后调用订阅的监听函数，更新state
+        // 在真正的react-redux中使用的其实是context来保存store
+        this.state.store.subscribe(() =&amp;gt; {
+            this.setState({
+                count: this.state.store.getState().count
+            })
+        })
+    }
+    handleClick = () =&amp;gt; {
+        this.state.store.dispatch({ type: &#39;INCREMENT&#39; })
+    }
+    render() {
+        return (
+            &amp;lt;div&amp;gt;
+                 &amp;lt;button onClick={this.handleClick}&amp;gt;&amp;lt;/button&amp;gt;
+            	{ this.state.count }
+            &amp;lt;/div&amp;gt;
+        )
+    }
+}
+
+
+看完上面的代码相信大家对redux会有一个比较深刻的认识，接下来我将根据源码来讲解
+入口
+import createStore from &#39;./createStore&#39;
+import combineReducers from &#39;./combineReducers&#39;
+import bindActionCreators from &#39;./bindActionCreators&#39;
+import applyMiddleware from &#39;./applyMiddleware&#39;
+import compose from &#39;./compose&#39;
+import warning from &#39;./utils/warning&#39;
+import __DO_NOT_USE__ActionTypes from &#39;./utils/actionTypes&#39;
+
+/*
+ * This is a dummy function to check if the function name has been altered by minification.
+ * If the function has been minified and NODE_ENV !== &#39;production&#39;, warn the user.
+ */
+function isCrushed() {}
+
+if (
+  process.env.NODE_ENV !== &#39;production&#39; &amp;amp;&amp;amp;
+  typeof isCrushed.name === &#39;string&#39; &amp;amp;&amp;amp;
+  isCrushed.name !== &#39;isCrushed&#39;
+) {
+  warning(
+    &#39;You are currently using minified code outside of NODE_ENV === &amp;quot;production&amp;quot;. &#39; +
+      &#39;This means that you are running a slower development build of Redux. &#39; +
+      &#39;You can use loose-envify (https://github.com/zertosh/loose-envify) for browserify &#39; +
+      &#39;or setting mode to production in webpack (https://webpack.js.org/concepts/mode/) &#39; +
+      &#39;to ensure you have the correct code for your production build.&#39;
+  )
+}
+
+export {
+  createStore,
+  combineReducers,
+  bindActionCreators,
+  applyMiddleware,
+  compose,
+  __DO_NOT_USE__ActionTypes
+}
+
+
+入口代码其实非常简单，导出了一些方法,下面我们逐个分析
+createStore
+定位到createStore.js文件
+首先我们分析以下这个方法的参数
+export default function createStore(reducer, preloadedState, enhancer) {}
+
+
+
+reducer
+reducer函数
+
+
+preloadedState
+初始的state,可选参数
+
+
+enhancer
+它其实是applyMiddleware函数，这个函数很重要，以后也会讲到
+
+
+createStore返回的方法:
+
+
+getState
+
+
+subscribe
+
+
+dispatch
+
+
+replaceReducer
+
+
+
+讲完参数和返回值，继续看
+  if (
+    (typeof preloadedState === &#39;function&#39; &amp;amp;&amp;amp; typeof enhancer === &#39;function&#39;) ||
+    (typeof enhancer === &#39;function&#39; &amp;amp;&amp;amp; typeof arguments[3] === &#39;function&#39;)
+  ) {
+    throw new Error(
+      &#39;It looks like you are passing several store enhancers to &#39; +
+        &#39;createStore(). This is not supported. Instead, compose them &#39; +
+        &#39;together to a single function.&#39;
+    )
+  }
+
+判断如果preloadedState是一个函数并且enhancer也是一个函数，就会抛出异常或者存在第四个参数是一个函数，也会抛出错误
+  if (typeof preloadedState === &#39;function&#39; &amp;amp;&amp;amp; typeof enhancer === &#39;undefined&#39;) {
+    enhancer = preloadedState
+    preloadedState = undefined
+  }
+
+对参数进行重载，如果我们只是用了reducer和enhancer，那么会对参数进行处理
+然后是下面这段代码，也非常重要
+  if (typeof enhancer !== &#39;undefined&#39;) {
+    if (typeof enhancer !== &#39;function&#39;) {
+      throw new Error(&#39;Expected the enhancer to be a function.&#39;)
+    }
+
+    return enhancer(createStore)(reducer, preloadedState)
+  }
+
+
+这段代码实际上执行了applyMiddleware函数，在其中，使用中间件对dispatch进行了包装，返回了新的store,这个以后会讲到，这里提前剧透一点
+export default function applyMiddleware(...middlewares) {
+  return createStore =&amp;gt; (...args) =&amp;gt; {
+
+    return {
+      ...store,
+      dispatch
+    }
+  }
+}
+
+
+可以看到，返回了新的store
+然后我们继续来看
+  // 获取reducer
+  let currentReducer = reducer   // 记录当前的reducer
+  let currentState = preloadedState  // 记录当前state
+
+  let currentListeners = []    // 记录监听函数
+  let nextListeners = currentListeners  // 最新的Listeners
+
+  // 是否正在Dispatch
+  let isDispatching = false
+
+这里初始化了一些变量，其作用不必多说，在继续后面的代码之前，大家回忆一下之前的例子，createStore返回了哪些方法，没错就是getState,dispatch,subscribe，其实并不止这些，还有replaceReducer以及observable,下面我将依次分析其源码
+getState
+  function getState() {
+
+    // isDispatching为false不能获取当前state
+    if (isDispatching) {
+      throw new Error(
+        &#39;You may not call store.getState() while the reducer is executing. &#39; +
+          &#39;The reducer has already received the state as an argument. &#39; +
+          &#39;Pass it down from the top reducer instead of reading it from the store.&#39;
+      )
+    }
+
+    return currentState
+  }
+
+很简洁的代码，首先判断是否正在dispatch，如果是就会抛出异常，否则正常返回currentState,也就是当前最新的state
+subscribe
+  function subscribe(listener) {
+    if (typeof listener !== &#39;function&#39;) {
+      throw new Error(&#39;Expected the listener to be a function.&#39;)
+    }
+
+    if (isDispatching) {
+      throw new Error(
+        &#39;You may not call store.subscribe() while the reducer is executing. &#39; +
+          &#39;If you would like to be notified after the store has been updated, subscribe from a &#39; +
+          &#39;component and invoke store.getState() in the callback to access the latest state. &#39; +
+          &#39;See https://redux.js.org/api-reference/store#subscribe(listener) for more details.&#39;
+      )
+    }
+
+    let isSubscribed = true
+
+    ensureCanMutateNextListeners()
+    nextListeners.push(listener)
+
+    return function unsubscribe() {
+      if (!isSubscribed) {
+        return
+      }
+
+      if (isDispatching) {
+        throw new Error(
+          &#39;You may not unsubscribe from a store listener while the reducer is executing. &#39; +
+            &#39;See https://redux.js.org/api-reference/store#subscribe(listener) for more details.&#39;
+        )
+      }
+
+      isSubscribed = false
+
+      ensureCanMutateNextListeners()
+      const index = nextListeners.indexOf(listener)
+      nextListeners.splice(index, 1)
+      currentListeners = null
+    }
+  }
+
+第一个判断，确保传入的listener存在，第二个判断，确保能够正在dispatch的时候，不会subscribe
+ let isSubscribed = true
+
+然后定义了一个变量，表示是否被订阅，因为如果没有被订阅，那么在调用unsubscribe也就是取消订阅是完全没有必要的，所以如果在unsubscribe中，检测到并没有被订阅，就会直接返回，不做处理
+ensureCanMutateNextListeners()
+
+function ensureCanMutateNextListeners() {
+    if (nextListeners === currentListeners) {
+      nextListeners = currentListeners.slice()
+    }
+}
+
+
+然后这段代码主要是用来防止在订阅和取消订阅时出现一些问题，确保能够改变nextListeners
+nextListeners.push(listener)
+
+最后把监听函数放在了nextListeners数组中，随后返回unsubscribe
+    return function unsubscribe() {
+      if (!isSubscribed) {
+        return
+      }
+
+      if (isDispatching) {
+        throw new Error(
+          &#39;You may not unsubscribe from a store listener while the reducer is executing. &#39; +
+            &#39;See https://redux.js.org/api-reference/store#subscribe(listener) for more details.&#39;
+        )
+      }
+
+      isSubscribed = false
+
+      ensureCanMutateNextListeners()
+      const index = nextListeners.indexOf(listener)
+      nextListeners.splice(index, 1)
+      currentListeners = null
+    }
+
+其实也是利用了闭包的特点，能够把监听函数保留在内存中
+dispatch
+  function dispatch(action) {
+    if (!isPlainObject(action)) {
+      throw new Error(
+        &#39;Actions must be plain objects. &#39; +
+          &#39;Use custom middleware for async actions.&#39;
+      )
+    }
+
+    if (typeof action.type === &#39;undefined&#39;) {
+      throw new Error(
+        &#39;Actions may not have an undefined &amp;quot;type&amp;quot; property. &#39; +
+          &#39;Have you misspelled a constant?&#39;
+      )
+    }
+
+    if (isDispatching) {
+      throw new Error(&#39;Reducers may not dispatch actions.&#39;)
+    }
+
+    try {
+      isDispatching = true
+      currentState = currentReducer(currentState, action)
+    } finally {
+      isDispatching = false
+    }
+
+    const listeners = (currentListeners = nextListeners)
+    for (let i = 0; i &amp;lt; listeners.length; i++) {
+      const listener = listeners[i]
+      listener()
+    }
+
+    return action
+  }
+
+第一个判断action是否是一个对象，否则报错
+第二个判断action中的类型是否存在，如果不存在也会报错
+第三个判断，保证不会再dispatch的时候再dispatch防止出现一些无法预估的问题
+这个方法我把它缩短点，大家就能看懂了
+  function dispatch(action) {
+    try {
+      isDispatching = true
+      currentState = currentReducer(currentState, action)
+    } finally {
+      isDispatching = false
+    }
+    const listeners = (currentListeners = nextListeners)
+    for (let i = 0; i &amp;lt; listeners.length; i++) {
+      const listener = listeners[i]
+      listener()
+    }
+
+    return action
+  }
+
+对于currentReducer的调用前后设置了不同的状态，给currentReducer函数传入了当前的state和action，然后拿到返回的新的state，替换掉原本的state,也就是currentState。随后依次调用nextListeners数组中存方的监听函数
+replaceReducer
+按照字面意思就知道是替换掉原本的reducer,我们看一下其实现
+  function replaceReducer(nextReducer) {
+    if (typeof nextReducer !== &#39;function&#39;) {
+      throw new Error(&#39;Expected the nextReducer to be a function.&#39;)
+    }
+
+    currentReducer = nextReducer
+
+    // This action has a similiar effect to ActionTypes.INIT.
+    // Any reducers that existed in both the new and old rootReducer
+    // will receive the previous state. This effectively populates
+    // the new state tree with any relevant data from the old one.
+    dispatch({ type: ActionTypes.REPLACE })
+  }
+
+如果传入的新的reducer不存在就会报错
+直接使用新的reducer替换掉了原本的currentReducer,然后调用dispatch({ type: ActionTypes.REPLACE }),初始化，相当于调用了reducer重置了currentState,至于ActionTypes其实是记录了一些状态
+observable
+  function observable() {
+    const outerSubscribe = subscribe
+    return {
+      subscribe(observer) {
+        if (typeof observer !== &#39;object&#39; || observer === null) {
+          throw new TypeError(&#39;Expected the observer to be an object.&#39;)
+        }
+
+        function observeState() {
+          if (observer.next) {
+            observer.next(getState())
+          }
+        }
+
+        observeState()
+        const unsubscribe = outerSubscribe(observeState)
+        return { unsubscribe }
+      },
+
+      [$$observable]() {
+        return this
+      }
+    }
+  }
+
+observable函数是为observable/reactive库预留的交互接口，下面举个Rxjs的Observable例子
+const observable = Rx.Observable.create(observer =&amp;gt; {
+  const id = setTimeout(() =&amp;gt; observer.next(&#39;...&#39;), 5000); // emit value after 5s
+
+  return () =&amp;gt; { clearTimeout(id); console.log(&#39;cleared!&#39;); };
+});
+
+const subscription = observable.subscribe(value =&amp;gt; console.log(value));
+
+setTimeout(() =&amp;gt; subscription.unsubscribe(), 3000); // cancel subscription after 3s
+
+
+const outerSubscribe = subscribe
+
+首先保留原本的subscribe
+然后返回了一个对象
+    return {
+      subscribe(observer) {
+        if (typeof observer !== &#39;object&#39; || observer === null) {
+          throw new TypeError(&#39;Expected the observer to be an object.&#39;)
+        }
+
+        function observeState() {
+          if (observer.next) {
+            observer.next(getState())
+          }
+        }
+
+        observeState()
+        const unsubscribe = outerSubscribe(observeState)
+        return { unsubscribe }
+      },
+
+      [$$observable]() {
+        return this
+      }
+    }
+
+subscribe中第一个判断：observer参数必须是一个对象，否则抛出异常
+        function observeState() {
+          if (observer.next) {
+            observer.next(getState())
+          }
+        }
+        observeState()
+
+创建了一个状态变更函数，把state传给了observer,然后立即执行observeState函数
+      [$$observable]() {
+        return this
+      }
+
+这个函数使用来返回observable对象
+export default function createStore(reducer, preloadedState, enhancer) {
+    
+    // ...一些方法
+    
+  dispatch({ type: ActionTypes.INIT })
+
+  return {
+    dispatch,
+    subscribe,
+    getState,
+    replaceReducer,
+    [$$observable]: observable
+  }
+}
+
+最后调用一次dispatch，为什么要单独调用一次呢，其实是为了初始化currentState,大家可以想象以下，调用dispatch之后会发生什么，由于我们并没有传入preloadedState，所以此时的currentState是undefined,调用dispatch之后它会调用reducer，返回一个我们自己的默认state(注意：{ type: ActionTypes.INIT }其实没有任何用处，只是一种标识)
+ // dispatch方法    
+    try {
+      isDispatching = true
+      currentState = currentReducer(currentState, action)
+    } finally {
+      isDispatching = false
+    }
+
+大家看到上面的代码，相信应该能明白了吧，关于createStore函数的介绍就到这里了
+bindActionCreators
+我们直接来看下，这个函数的实现，它也是在一个单独的文件bindActionCreators.js
+function bindActionCreator(actionCreator, dispatch) {
+  return function() {
+    return dispatch(actionCreator.apply(this, arguments))
+  }
+}
+
+这个文件中，有一个内部的私有方法bindActionCreator,它和bindActionCreators的唯一区别就是少了一个字母，其实它就是用来单独处理action和dispatch之间的绑定，它利用了闭包的特性，返回了一个新的函数，直接调用就相当于调用了dispatch
+export default function bindActionCreators(actionCreators, dispatch) {
+  if (typeof actionCreators === &#39;function&#39;) {
+    return bindActionCreator(actionCreators, dispatch)
+  }
+
+  if (typeof actionCreators !== &#39;object&#39; || actionCreators === null) {
+    throw new Error(
+      `bindActionCreators expected an object or a function, instead received ${
+        actionCreators === null ? &#39;null&#39; : typeof actionCreators
+      }. ` +
+        `Did you write &amp;quot;import ActionCreators from&amp;quot; instead of &amp;quot;import * as ActionCreators from&amp;quot;?`
+    )
+  }
+
+  const boundActionCreators = {}
+  for (const key in actionCreators) {
+    const actionCreator = actionCreators[key]
+    if (typeof actionCreator === &#39;function&#39;) {
+      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch)
+    }
+  }
+  return boundActionCreators
+}
+
+
+然后我们再来看bindActionCreators,他的第一个参数是一个由actionCreator组成的对象，第二个参数就是dispatch方法
+第一个判断：如果只传入了一个actionCreator，直接调用bindActionCreator,返回一个函数
+第二个判断：如果actionCreators不是对象，或者传入的是undefined，null就会抛出错误
+  const boundActionCreators = {}
+  for (const key in actionCreators) {
+    const actionCreator = actionCreators[key]
+    if (typeof actionCreator === &#39;function&#39;) {
+      boundActionCreators[key] = bindActionCreator(actionCreator, dispatch)
+    }
+  }
+  return boundActionCreators
+
+然后是这段代码，他会遍历所有的actionCreator,把actionCreator的键作为，boundActionCreators对象中的一个键，并调用bindActionCreator对每个actionCreator进行处理，把处理返回的函数，作为boundActionCreators对象中的键的值，类似这样
+{
+	incrementAction(){
+		return {
+			type: &#39;INCREMENT&#39;
+		}
+	},
+	decrementAction(){
+		return {
+			type: &#39;DECREMENT&#39;
+		}
+	}
+}
+// 经过bindActionCreators处理
+{
+	incrementAction: function() {
+		dispatch(incrementAction())
+	},
+	decrementAction: function() {
+		dispatch(decrementAction())
+	}
+}
+
+
+// 原本我们要这么用
+store.dispatch(incrementAction())
+
+// 现在
+incrementAction()
+
+怎么样是不是很方便！
+ok，现在bindActionCreators我们也讲解完了
+combineReducers
+这个函数的实现也是在一个单独文件里，它里面也有很多内置函数，因为内容比较多，我们一开始只展示一部分
+export default function combineReducers(reducers) {
+  const reducerKeys = Object.keys(reducers)
+  const finalReducers = {}
+  for (let i = 0; i &amp;lt; reducerKeys.length; i++) {
+    const key = reducerKeys[i]
+
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      if (typeof reducers[key] === &#39;undefined&#39;) {
+        warning(`No reducer provided for key &amp;quot;${key}&amp;quot;`)
+      }
+    }
+
+    if (typeof reducers[key] === &#39;function&#39;) {
+      finalReducers[key] = reducers[key]
+    }
+  }
+  const finalReducerKeys = Object.keys(finalReducers)
+
+  // This is used to make sure we don&#39;t warn about the same
+  // keys multiple times.
+  let unexpectedKeyCache
+  if (process.env.NODE_ENV !== &#39;production&#39;) {
+    unexpectedKeyCache = {}
+  }
+
+  let shapeAssertionError
+  try {
+    assertReducerShape(finalReducers)
+  } catch (e) {
+    shapeAssertionError = e
+  }
+
+  return function combination(state = {}, action) {
+    if (shapeAssertionError) {
+      throw shapeAssertionError
+    }
+
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      const warningMessage = getUnexpectedStateShapeWarningMessage(
+        state,
+        finalReducers,
+        action,
+        unexpectedKeyCache
+      )
+      if (warningMessage) {
+        warning(warningMessage)
+      }
+    }
+
+    let hasChanged = false
+    const nextState = {}
+    for (let i = 0; i &amp;lt; finalReducerKeys.length; i++) {
+      const key = finalReducerKeys[i]
+      const reducer = finalReducers[key]
+      const previousStateForKey = state[key]
+      const nextStateForKey = reducer(previousStateForKey, action)
+      if (typeof nextStateForKey === &#39;undefined&#39;) {
+        const errorMessage = getUndefinedStateErrorMessage(key, action)
+        throw new Error(errorMessage)
+      }
+      nextState[key] = nextStateForKey
+      hasChanged = hasChanged || nextStateForKey !== previousStateForKey
+    }
+    return hasChanged ? nextState : state
+  }
+}
+
+
+首先只要用过combineReducers函数，大家都知道，combineReducers返回的是一个新的reducer,那么它是怎么实现，把action分发到不同的reducer，大家可以先思考一下
+仔细想一想，还是挺好实现的，其实就是循环调用每个reducer，传入action,我们知道reducer里面是有switch语句的，它是一个纯函数，不会造成其他的副作用，所以一定会有对应的action会被触发，下面我们具体分析
+  const reducerKeys = Object.keys(reducers)
+  const finalReducers = {}
+  for (let i = 0; i &amp;lt; reducerKeys.length; i++) {
+    const key = reducerKeys[i]
+
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      if (typeof reducers[key] === &#39;undefined&#39;) {
+        warning(`No reducer provided for key &amp;quot;${key}&amp;quot;`)
+      }
+    }
+
+    if (typeof reducers[key] === &#39;function&#39;) {
+      finalReducers[key] = reducers[key]
+    }
+  }
+
+首先是拿到了所有的reducer函数，获取到它的keys,根据key值，遍历所有的reducer
+第一个判断：reducer是否是函数，是否不存在，如果都不成立就报出警告
+第二个判断：相当于一层过滤，防止有不是函数的reducer，然后把正确的reducer放在了一个新对象finalReducers中
+  const finalReducerKeys = Object.keys(finalReducers)
+
+  // This is used to make sure we don&#39;t warn about the same
+  // keys multiple times.
+  let unexpectedKeyCache
+  if (process.env.NODE_ENV !== &#39;production&#39;) {
+    unexpectedKeyCache = {}
+  }
+  let shapeAssertionError
+  try {
+    assertReducerShape(finalReducers)
+  } catch (e) {
+    shapeAssertionError = e
+  }
+
+首先获取到reducer的keys数组，这个暂时不讲，后面有用到，大家先留个印象，然后再开发环境，创建了一个unexpectedKeyCache对象，然后在后面又调用了assertReducerShape(finalReducers)函数，它的实现如下
+function assertReducerShape(reducers) {
+  Object.keys(reducers).forEach(key =&amp;gt; {
+    const reducer = reducers[key]
+    const initialState = reducer(undefined, { type: ActionTypes.INIT })
+    if (typeof initialState === &#39;undefined&#39;) {
+      throw new Error(
+        `Reducer &amp;quot;${key}&amp;quot; returned undefined during initialization. ` +
+          `If the state passed to the reducer is undefined, you must ` +
+          `explicitly return the initial state. The initial state may ` +
+          `not be undefined. If you don&#39;t want to set a value for this reducer, ` +
+          `you can use null instead of undefined.`
+      )
+    }
+
+    if (
+      typeof reducer(undefined, {
+        type: ActionTypes.PROBE_UNKNOWN_ACTION()
+      }) === &#39;undefined&#39;
+    ) {
+      throw new Error(
+        `Reducer &amp;quot;${key}&amp;quot; returned undefined when probed with a random type. ` +
+          `Don&#39;t try to handle ${ActionTypes.INIT} or other actions in &amp;quot;redux/*&amp;quot; ` +
+          `namespace. They are considered private. Instead, you must return the ` +
+          `current state for any unknown actions, unless it is undefined, ` +
+          `in which case you must return the initial state, regardless of the ` +
+          `action type. The initial state may not be undefined, but can be null.`
+      )
+    }
+  })
+}
+
+整个函数所做的事还是挺简单的，遍历了所有的reducer,然后调用reducer，判断它的返回值，如果为undefined就抛出错误，一般来说这种报错都是我们没有设置state默认值或者在switch中没有default默认返回state
+我们回到刚才的讲解,大家应该还记得shapeAssertionError这个变量吧,如果我们在reducer中没有返回默认值，就会把错误记录在这个变量中，然后我们继续看combineReducers返回的函数
+export default function combineReducers(reducers) {
+  // .. .....
+  
+  return function combination(state = {}, action) {
+    if (shapeAssertionError) {
+      throw shapeAssertionError
+    }
+
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      const warningMessage = getUnexpectedStateShapeWarningMessage(
+        state,
+        finalReducers,
+        action,
+        unexpectedKeyCache
+      )
+      if (warningMessage) {
+        warning(warningMessage)
+      }
+    }
+
+    let hasChanged = false
+    const nextState = {}
+    for (let i = 0; i &amp;lt; finalReducerKeys.length; i++) {
+      const key = finalReducerKeys[i]
+      const reducer = finalReducers[key]
+      const previousStateForKey = state[key]
+      const nextStateForKey = reducer(previousStateForKey, action)
+      if (typeof nextStateForKey === &#39;undefined&#39;) {
+        const errorMessage = getUndefinedStateErrorMessage(key, action)
+        throw new Error(errorMessage)
+      }
+      nextState[key] = nextStateForKey
+      hasChanged = hasChanged || nextStateForKey !== previousStateForKey
+    }
+    return hasChanged ? nextState : state
+  }
+}
+
+从它的参数来看，就是一个reducer所具备的参数
+第一个判断：shapeAssertionError如果存在就抛出错误，这个刚刚我们讲过
+第二个判断：如果在开发环境，就调用getUnexpectedStateShapeWarningMessage函数，从这个函数的字面意思相信大家都知道了，获取不在预期形式state的警号信息，没错就是用来获取警告信息，然后判断警告信息如果存在就在开发环境警告,具体看下getUnexpectedStateShapeWarningMessage函数实现,因为内容实在太多，而且并不是很重要，我就把讲解写在注释中
+// 调用
+const warningMessage = getUnexpectedStateShapeWarningMessage(
+   state,  // 传入reducer的默认state
+   finalReducers,  // reducers对象
+   action, 
+   unexpectedKeyCache  // 一个空对象
+)
+
+// 实现
+function getUnexpectedStateShapeWarningMessage(
+  inputState,
+  reducers,
+  action,
+  unexpectedKeyCache
+) {
+  // 获取reducers中的keys
+  const reducerKeys = Object.keys(reducers)
+  const argumentName =
+    action &amp;amp;&amp;amp; action.type === ActionTypes.INIT
+      ? &#39;preloadedState argument passed to createStore&#39;
+      : &#39;previous state received by the reducer&#39;
+  
+  
+  // 如果我们调用combineReducers但是没有传入任何reducer就会直接返回错误信息
+  if (reducerKeys.length === 0) {
+    return (
+      &#39;Store does not have a valid reducer. Make sure the argument passed &#39; +
+      &#39;to combineReducers is an object whose values are reducers.&#39;
+    )
+  }
+
+   // 如果state不是一个对象，就返回错误信息
+  if (!isPlainObject(inputState)) {
+    return (
+      `The ${argumentName} has unexpected type of &amp;quot;` +
+      {}.toString.call(inputState).match(/\s([a-z|A-Z]+)/)[1] +
+      `&amp;quot;. Expected argument to be an object with the following ` +
+      `keys: &amp;quot;${reducerKeys.join(&#39;&amp;quot;, &amp;quot;&#39;)}&amp;quot;`
+    )
+  }
+// 给state中存在而reducer中不存在的属性添加缓存标识
+  const unexpectedKeys = Object.keys(inputState).filter(
+    key =&amp;gt; !reducers.hasOwnProperty(key) &amp;amp;&amp;amp; !unexpectedKeyCache[key]
+  )
+  // 设置缓存
+  unexpectedKeys.forEach(key =&amp;gt; {
+    unexpectedKeyCache[key] = true
+  })
+// 如果调用replaceReducer会触发这里的返回，详细参见replaceReducer具体实现
+  if (action &amp;amp;&amp;amp; action.type === ActionTypes.REPLACE) return
+  // 如果unexpectedKeys有内容就返回错误信息
+  if (unexpectedKeys.length &amp;gt; 0) {
+    return (
+      `Unexpected ${unexpectedKeys.length &amp;gt; 1 ? &#39;keys&#39; : &#39;key&#39;} ` +
+      `&amp;quot;${unexpectedKeys.join(&#39;&amp;quot;, &amp;quot;&#39;)}&amp;quot; found in ${argumentName}. ` +
+      `Expected to find one of the known reducer keys instead: ` +
+      `&amp;quot;${reducerKeys.join(&#39;&amp;quot;, &amp;quot;&#39;)}&amp;quot;. Unexpected keys will be ignored.`
+    )
+  }
+}
+
+讲完这些，我们看最后的一些代码
+    let hasChanged = false
+    const nextState = {}
+    for (let i = 0; i &amp;lt; finalReducerKeys.length; i++) {
+      const key = finalReducerKeys[i]
+      const reducer = finalReducers[key]
+      const previousStateForKey = state[key]
+      const nextStateForKey = reducer(previousStateForKey, action)
+      if (typeof nextStateForKey === &#39;undefined&#39;) {
+        const errorMessage = getUndefinedStateErrorMessage(key, action)
+        throw new Error(errorMessage)
+      }
+      nextState[key] = nextStateForKey
+      hasChanged = hasChanged || nextStateForKey !== previousStateForKey
+    }
+    return hasChanged ? nextState : state
+
+简单来讲，本质上还是调用了reducer,而且是调用了每个reducer
+hasChanged用于判断，如果前后值并没有发生改变，就返回原本的值，否则返回新的state值
+nextState保存新的state值
+      const key = finalReducerKeys[i]
+      const reducer = finalReducers[key]
+      const previousStateForKey = state[key]
+      const nextStateForKey = reducer(previousStateForKey, action)
+
+这些代码就不多做解释了，重要一点的是state[key],他把reducer的key,作为state的key,例如
+combineReducer({
+    user,
+    cart
+})
+
+// 使用state
+const state = store.getState()
+const userState = state.user
+
+      if (typeof nextStateForKey === &#39;undefined&#39;) {
+        const errorMessage = getUndefinedStateErrorMessage(key, action)
+        throw new Error(errorMessage)
+      }
+      nextState[key] = nextStateForKey
+      hasChanged = hasChanged || nextStateForKey !== previousStateForKey
+
+最后就是上面这段代码
+判断：如果此reducer返回的新的state是undefined，抛出异常
+然后把新的state放入nextState对象中，并返回，最后对前后的值进行了对比，也是一种优化
+applyMiddleware
+export default function applyMiddleware(...middlewares) {
+  return createStore =&amp;gt; (...args) =&amp;gt; {
+    const store = createStore(...args)
+    let dispatch = () =&amp;gt; {
+      throw new Error(
+        &#39;Dispatching while constructing your middleware is not allowed. &#39; +
+          &#39;Other middleware would not be applied to this dispatch.&#39;
+      )
+    }
+
+    const middlewareAPI = {
+      getState: store.getState,
+      dispatch: (...args) =&amp;gt; dispatch(...args)
+    }
+    const chain = middlewares.map(middleware =&amp;gt; middleware(middlewareAPI))
+    dispatch = compose(...chain)(store.dispatch)
+
+    return {
+      ...store,
+      dispatch
+    }
+  }
+}
+
+
+中间件的作用实际上是对dispatch进行了包装,applyMiddleware函数，连续返回了两个函数，包括它本身，就有三层函数，这三层函数为什么这么设计，我也不清楚，我个人认为一层也可以。
+然后又调用createStore,拿到了当前的store,之后对store中的dispatch方法进行了处理
+    const middlewareAPI = {
+      getState: store.getState,
+      dispatch: (...args) =&amp;gt; dispatch(...args)
+    }
+    const chain = middlewares.map(middleware =&amp;gt; middleware(middlewareAPI))
+    dispatch = compose(...chain)(store.dispatch)
+
+
+这段代码其实是有点难理解的，我们拆分来讲
+    const middlewareAPI = {
+      getState: store.getState,
+      dispatch: (...args) =&amp;gt; dispatch(...args)
+    }
+    const chain = middlewares.map(middleware =&amp;gt; middleware(middlewareAPI))
+
+大家可能不知道这到底干了什么，先卖个关子，middlewareAPI的作用是给中间件传入dispatch方法和getState，它利用了闭包的特性，至于它的使用，在后面实现中间件的时候会有讲解
+dispatch = compose(...chain)(store.dispatch)
+
+最关键的代码来了，下面详细讲解compose函数
+compose
+export default function compose(...funcs) {
+  if (funcs.length === 0) {
+    return arg =&amp;gt; arg
+  }
+
+  if (funcs.length === 1) {
+    return funcs[0]
+  }
+
+  return funcs.reduce((a, b) =&amp;gt; (...args) =&amp;gt; a(b(...args)))
+}
+
+
+compose的实现非常简单，但是又非常重要，它是applyMiddleware的核心与关键，在讲compose之前我先从三个方面介绍这个函数
+
+
+redux中间件参照了koa中间件的实现，以后我在讲解koa源码分析系列也会讲到
+
+
+洋葱模型
+
+大家把洋葱的中心想象成dispatch函数，后面大家会明白
+
+
+函数组合
+
+
+以上三者是什么，大家如果有不知道的，希望可以查一下方便大家理解
+总的来说这个函数所作的事情，就是把一个函数的返回值，作为另一个函数的参数，不断地迭代
+在redux的角度来讲：对dispatch进行了一层层的包装，有点像装饰器，我再画一张图方便理解
+
+如果我们有使用中间件，我们拿到的dispatch实际上是被包装后的dispatch，对于compose的代码，希望大家多看几遍
+logger中间件实现
+const logger1 = function({ dispatch, getState }) {
+  return function(next) {
+    return function(action) {
+      // 打印旧state
+      console.log(&#39;old&#39;, getState());
+      next(action)
+      // 打印新state
+      console.log(&#39;new&#39;, getState());
+    }
+  }
+}
+
+首先中间件返回了一个函数,还记得middlewareAPI吗，第一层的函数就是用来保存middlewareAPI中的方法，
+第二层函数：这个函数的参数，是经过上一层中间件包装后的或者原始的dispatch方法
+第三层函数：参数是action，它是包装后的dispatch，假如还有下一个中间件，就会把第三层函数，作为参数，传给下一个中间件的第二层函数，也就是next
+讲完这些可能还是没明白，希望大家结合上面的图，多看几遍,理解之后看后面的中间件实现旧方便很多
+redux-thunk中间件实现
+const thunk = ({ dispatch, getState }) =&amp;gt; next =&amp;gt; action =&amp;gt; {
+  if (typeof action === &#39;function&#39;) {
+    action(dispatch, getState)
+  } else {
+    next(action)
+  }
+}
+
+redux-promise中间件实现
+const promise = ({ dispatch, getState }) =&amp;gt; next =&amp;gt; action =&amp;gt; {
+   if (action.then) {
+      action.then(function(data) {
+        dispatch(data)
+      })
+   } else {
+      next(action)
+   }
+}
+
+
+React-Redux
+虽然讲完了redux，但是它在react中使用还是要借助react-redux的，下面我将从入口文件开始
+import Provider from &#39;./components/Provider&#39;
+import connectAdvanced from &#39;./components/connectAdvanced&#39;
+import { ReactReduxContext } from &#39;./components/Context&#39;
+import connect from &#39;./connect/connect&#39;
+
+import { useDispatch } from &#39;./hooks/useDispatch&#39;
+import { useSelector } from &#39;./hooks/useSelector&#39;
+import { useStore } from &#39;./hooks/useStore&#39;
+
+import { setBatch } from &#39;./utils/batch&#39;
+import { unstable_batchedUpdates as batch } from &#39;./utils/reactBatchedUpdates&#39;
+import shallowEqual from &#39;./utils/shallowEqual&#39;
+
+setBatch(batch)
+
+export {
+  Provider,
+  connectAdvanced,
+  ReactReduxContext,
+  connect,
+  batch,
+  useDispatch,
+  useSelector,
+  useStore,
+  shallowEqual
+}
+
+
+
+从这个文件来看，react-redux，返回了这些函数
+  Provider,
+  connectAdvanced,
+  ReactReduxContext,
+  connect,
+  batch,
+  useDispatch,
+  useSelector,
+  useStore,
+  shallowEqual
+
+Provider,connect这两个是我们常用的函数，但其它的，在这里说实话我从来没用过，这也是在我看源码的时候才知道的API，看源码的过程就是学习API的过程，在我看来也算是种查漏补缺
+同时如果有注意到的话能够发现，它导出了batch,而在上面的setBatch(batch)，也有使用到,那么这个batch又是什么呢，先从setBatch讲起
+batch
+// batch.js
+function defaultNoopBatch(callback) {
+  callback()
+}
+
+let batch = defaultNoopBatch
+
+// Allow injecting another batching function later
+export const setBatch = newBatch =&amp;gt; (batch = newBatch)
+
+// Supply a getter just to skip dealing with ESM bindings
+export const getBatch = () =&amp;gt; batch
+
+手写给batch设置了一个默认函数defaultNoopBatch,它没有做什么处理，只是调用了传入的回调函数
+这个文件导出了两个函数setBatch和getBatch,分别用于设置和获取batch
+import { unstable_batchedUpdates as batch } from &#39;./utils/reactBatchedUpdates&#39;
+
+
+setBatch(batch)
+
+我们知道在index.js种调用了setBatch方法，并传入了batch,来看下这个batch是什么
+export { unstable_batchedUpdates } from &#39;react-dom&#39;
+
+没想到尽然是react-deom里面的一个方法，unstable_batchedUpdates又是啥，其实在看源码之前我也是不知道的，看源码真的是能学到东西啊，嘿嘿，为了方便介绍unstable_batchedUpdates,下面举个例子
+class Sub extends PureComponent {
+    state = {
+        b: false,
+        a: false
+    }
+
+    handleClick = () =&amp;gt; {
+		this.setState({
+            a: true
+        })
+        this.setState({
+            b: true
+        })
+    }
+
+    render() {
+    	return &amp;lt;button onClick={this.handleClick}&amp;gt;Click&amp;lt;/button&amp;gt;
+    }
+}
+
+在这个点击事件中，更新总是按照它们发生的顺序进行浅合并, 在 React 事件处理程序中，不论 setState() 调用了多少次，也不论 setState()被多少个组件调用，它们在事件结束时只会生成一次重新渲染**
+promise.then(() =&amp;gt; {
+  // 强制批量处理
+  ReactDOM.unstable_batchedUpdates(() =&amp;gt; {
+    this.setState({a: true}); // 不重新渲染
+    this.setState({b: true}); // 不重新渲染
+    this.props.setParentState(); // 不重新渲染
+  });
+  // 当我们退出 unstable_batchedUpdates函数后，重新渲染一次
+});
+
+所以unstable_batchedUpdates方法就是用来批量更新state,并只渲染一次
+某大佬github中有更详细讲解，我也是参考了其文章：
+知道了batch是干嘛的，我们回到index.js
+export {
+  Provider,
+  connectAdvanced,
+  ReactReduxContext,
+  connect,
+  batch,
+  useDispatch,
+  useSelector,
+  useStore,
+  shallowEqual
+}
+
+接下来讲解Provider
+Provider
+import React, { Component } from &#39;react&#39;
+import PropTypes from &#39;prop-types&#39;
+import { ReactReduxContext } from &#39;./Context&#39;
+import Subscription from &#39;../utils/Subscription&#39;
+
+class Provider extends Component {
+  constructor(props) {
+    super(props)
+    const { store } = props
+    this.notifySubscribers = this.notifySubscribers.bind(this)
+    const subscription = new Subscription(store)
+    subscription.onStateChange = this.notifySubscribers
+
+    this.state = {
+      store,
+      subscription
+    }
+
+    this.previousState = store.getState()
+  }
+
+  componentDidMount() {
+    this.state.subscription.trySubscribe()
+    if (this.previousState !== this.props.store.getState()) {
+      this.state.subscription.notifyNestedSubs()
+    }
+  }
+
+  componentWillUnmount() {
+    if (this.unsubscribe) this.unsubscribe()
+
+    this.state.subscription.tryUnsubscribe()
+  }
+
+  componentDidUpdate(prevProps) {
+    if (this.props.store !== prevProps.store) {
+      this.state.subscription.tryUnsubscribe()
+      const subscription = new Subscription(this.props.store)
+      subscription.onStateChange = this.notifySubscribers
+      this.setState({ store: this.props.store, subscription })
+    }
+  }
+
+  notifySubscribers() {
+    this.state.subscription.notifyNestedSubs()
+  }
+
+  render() {
+    const Context = this.props.context || ReactReduxContext
+
+    return (
+      &amp;lt;Context.Provider value={this.state}&amp;gt;
+        {this.props.children}
+      &amp;lt;/Context.Provider&amp;gt;
+    )
+  }
+}
+
+Provider.propTypes = {
+  store: PropTypes.shape({
+    subscribe: PropTypes.func.isRequired,
+    dispatch: PropTypes.func.isRequired,
+    getState: PropTypes.func.isRequired
+  }),
+  context: PropTypes.object,
+  children: PropTypes.any
+}
+
+export default Provider
+
+
+由于内容较多，我们分方法来讲,先来看下构造函数
+  constructor(props) {
+    super(props)
+    const { store } = props
+    this.notifySubscribers = this.notifySubscribers.bind(this)
+    const subscription = new Subscription(store)
+    subscription.onStateChange = this.notifySubscribers
+    this.state = {
+      store,
+      subscription
+    }
+
+    this.previousState = store.getState()
+  }
+
+
+
+通过props拿到了我们传给Provider的store
+
+
+给notifySubscribers绑定this
+  notifySubscribers() {
+    this.state.subscription.notifyNestedSubs()
+  }
+
+
+
+创建Subscription对象，并传入store
+
+
+将notifySubscribers函数作为Subscription对象的onStateChange属性
+
+
+把store和subscription放在组件state中
+
+
+获取store中的state,放在previousState对象属性中
+
+
+以上步骤仅仅是做了一些初始化，并没有调用任何方法，然后看下在组件挂载阶段做了什么
+  componentDidMount() {
+    this.state.subscription.trySubscribe()
+
+    if (this.previousState !== this.props.store.getState()) {
+      this.state.subscription.notifyNestedSubs()
+    }
+  }
+
+调用了subscription对象中的trySubscribe方法，它的实现如下
+export default class Subscription {
+  constructor(store, parentSub) {
+    this.store = store
+    this.parentSub = parentSub
+    this.unsubscribe = null
+    this.listeners = nullListeners
+
+    this.handleChangeWrapper = this.handleChangeWrapper.bind(this)
+  }
+  // ...其他  
+  trySubscribe() {
+    if (!this.unsubscribe) {
+      this.unsubscribe = this.parentSub
+        ? this.parentSub.addNestedSub(this.handleChangeWrapper)
+        // 订阅handleChangeWrapper方法，其实就是notifySubscribers方法，这个方法可以通知调用所有listeners
+        : this.store.subscribe(this.handleChangeWrapper)
+      // 创建监听函数集合，它返回了一个对象，包含：clear方法，get方法，notify方法，subscribe方法
+      this.listeners = createListenerCollection()
+    }
+  }
+    //...其他
+}
+
+这里初始时parentSub并不存在，所以执行this.store.subscribe(this.handleChangeWrapper)
+  handleChangeWrapper() {
+    if (this.onStateChange) {
+      this.onStateChange()
+    }
+  }
+
+handleChangeWrapper方法实际上又调用了,Provider中的notifySubscribers方法
+  notifySubscribers() {
+    this.state.subscription.notifyNestedSubs()
+  }
+
+所以等价于
+this.store.subscribe(function notifySubscribers() {
+    // 通知调用所有listener
+    this.state.subscription.notifyNestedSubs()
+})
+
+继续看后面的代码
+this.listeners = createListenerCollection()
+
+创建了一个listener集合，这个函数很关键
+createListenerCollection
+function createListenerCollection() {
+  const batch = getBatch()
+  // the current/next pattern is copied from redux&#39;s createStore code.
+  // TODO: refactor+expose that code to be reusable here?
+  let current = []
+  let next = []
+
+  return {
+    clear() {
+      next = CLEARED
+      current = CLEARED
+    },
+
+    notify() {
+      const listeners = (current = next)
+      // 批量调用监听函数listeners
+      batch(() =&amp;gt; {
+        for (let i = 0; i &amp;lt; listeners.length; i++) {
+          listeners[i]()
+        }
+      })
+    },
+
+    get() {
+      return next
+    },
+
+    subscribe(listener) {
+      let isSubscribed = true
+      if (next === current) next = current.slice()
+      next.push(listener)
+      return function unsubscribe() {
+        if (!isSubscribed || current === CLEARED) return
+        isSubscribed = false
+
+        if (next === current) next = current.slice()
+        next.splice(next.indexOf(listener), 1)
+      }
+    }
+  }
+}
+
+首先获取到了batch,这个batch是什么，大家应该还记得，用于批量setState，并且只渲染一次，别的不看，我们先看notify
+1.notify
+    notify() {
+      const listeners = (current = next)
+      // 批量调用监听函数listeners
+      batch(() =&amp;gt; {
+        for (let i = 0; i &amp;lt; listeners.length; i++) {
+          listeners[i]()
+        }
+      })
+    },
+
+大家应该能注意到使用batch,包裹的回调函数，里面循环调用了listener，没错最关键的就是这里了，如果多次调用setState,每次都要重新渲染，太过于耗费性能，使用batch就是必须的了
+然后我们来看下，subscribe方法
+2.subscribe
+    subscribe(listener) {
+      let isSubscribed = true
+      if (next === current) next = current.slice()
+      next.push(listener)
+      return function unsubscribe() {
+        if (!isSubscribed || current === CLEARED) return
+        isSubscribed = false
+
+        if (next === current) next = current.slice()
+        next.splice(next.indexOf(listener), 1)
+      }
+    }
+
+这个方法我觉得其实没必要解释了。。。和redux中的实现也是非常相似的
+3.get
+    get() {
+      return next
+    }
+
+这个方法是用来返回接下来的监听函数数组
+4.clear
+    clear() {
+      next = CLEARED
+      current = CLEARED
+    }
+
+清除当前和接下来的监听函数数组
+讲完createListenerCollection函数，回到trySubscribe方法
+  trySubscribe() {
+    if (!this.unsubscribe) {
+      this.unsubscribe = this.parentSub
+        ? this.parentSub.addNestedSub(this.handleChangeWrapper)
+        // 订阅handleChangeWrapper方法，其实就是notifySubscribers方法，这个方法可以通知调用所有listeners
+        : this.store.subscribe(this.handleChangeWrapper)
+      // 创建监听函数集合，它返回了一个对象，包含：clear方法，get方法，notify方法，subscribe方法
+      this.listeners = createListenerCollection()
+    }
+  }
+
+最后这个方法的作用就是：订阅handleChangeWrapper函数，它能够调用所有监听函数；同时创建了ListenerCollection,返回了一个对象，包含notify，subscribe等
+再回到Provider组件中
+  componentDidMount() {
+    this.state.subscription.trySubscribe()
+    if (this.previousState !== this.props.store.getState()) {
+      this.state.subscription.notifyNestedSubs()
+    }
+  }
+
+this.state.subscription.trySubscribe(),刚刚分析过，然后是一个判断
+    if (this.previousState !== this.props.store.getState()) {
+      this.state.subscription.notifyNestedSubs()
+    }
+
+如果前后的state有变化就调用notifyNestedSubs,也就是说当我们调用dispatch，更新了state,就会导致状态的更新，状态更新，就需要通知监听函数调用，更新视图，继续看notifyNestedSubs实现
+  notifyNestedSubs() {
+    // 调用所有的listener,批量调用setState,但是只渲染一次
+    this.listeners.notify()
+  }
+
+
+这个方法就不用我说了把，调用了监听函数，使用batch更新视图
+继续。。。
+  class Provider extends Component {
+      componentWillUnmount() {
+        if (this.unsubscribe) this.unsubscribe()
+        this.state.subscription.tryUnsubscribe()
+      }  
+  }
+
+
+在组件将要卸载阶段，清除所有的监听函数
+  componentDidUpdate(prevProps) {
+    if (this.props.store !== prevProps.store) {
+      this.state.subscription.tryUnsubscribe()
+      const subscription = new Subscription(this.props.store)
+      subscription.onStateChange = this.notifySubscribers
+      this.setState({ store: this.props.store, subscription })
+    }
+  }
+
+在组件更新阶段，也就是我们调用dispatch，更新了store中的状态，然后所有的listeners被notify通知调用，假如前后的store不一样，就会重复之前constructor中一样的初始化操作，其实这个判断一般来说不会执行到
+最后就是render函数了
+  render() {
+    const Context = this.props.context || ReactReduxContext
+    return (
+      &amp;lt;Context.Provider value={this.state}&amp;gt;
+        {this.props.children}
+      &amp;lt;/Context.Provider&amp;gt;
+    )
+  }
+  
+  
+  
+  
+// 引入context  
+Provider.propTypes = {
+  store: PropTypes.shape({
+    subscribe: PropTypes.func.isRequired,
+    dispatch: PropTypes.func.isRequired,
+    getState: PropTypes.func.isRequired
+  }),
+  context: PropTypes.object,
+  children: PropTypes.any
+}
+
+Provider最核心的功能就是给后代组件提供store,它利用了React的Context，因为React16引入了createContext，而且还有以前的Context用法，所以Provider会根据情况使用相应的Context
+// 优先采用原本的context
+const Context = this.props.context || ReactReduxContext
+
+// 新版本的context
+export const ReactReduxContext = React.createContext(null)
+
+关于context的用法不是本文重点，大家可以参考官方文档
+connectAdvanced
+以下摘抄了文档中的介绍，毕竟比自己写的详细很多
+它是一个将 React 组件连接到 Redux store 的函数。这个函数是 connect() 的基础，但是对于如何把state, props, 和 dispatch 组合到最后的 props 中，则不那么自以为是。它不对默认值或结果的记录做任何假设，而是将这些责任留给调用者。
+它不修改传递给它的组件类；相反，它返回一个新的、已连接的组件类，供您使用。
+参数
+
+selectorFactory(dispatch, factoryOptions): selector(state, ownProps): props (Function):初始化选择器函数 (在每个实例的构造函数中)。该选择器函数是在 connector 组件需要重新计算一个新的 props 时调用，作为 store 的 state 改变或者接收到一个新的 props 的结果。selector 的结果应该是一个普通对象，作为被包裹的组件的 props 传递。如果连续调用 selector 都返回与上一次调用相同的对象(===)，则不会重新渲染该组件。selector 的责任是在适当的时候返回以前的对象。
+[connectOptions] (Object) 如果指定，则进一步自定义连接器(connector)的行为。
+
+[getDisplayName] (Function): 计算连接器组件相对于被包裹的组件的 DisplayName 属性。 通常被包裹函数覆盖。 默认值: name =&amp;gt; &#39;ConnectAdvanced(&#39;+name+&#39;)&#39;
+[methodName] (String):显示在错误消息中。 通常被包裹函数覆盖。 默认值: &#39;connectAdvanced&#39;
+[renderCountProp] (String): 如果被定义, 名为此值的属性将添加到传递给被包裹组件的 props 中。它的值将是组件被渲染的次数，这对于跟踪不必要的重新渲染非常有用。默认值: undefined
+[shouldHandleStateChanges] (Boolean): 控制连接器（connector）组件是否订阅 redux store 的 state 更改。 如果设置为 false，则只会在componentWillReceiveProps中重新渲染。 默认值: true
+[storeKey] (String): 可以获取 store 的 props/context key。 当你不明智地使用了多个 store 的时候，你才可能需要这个。默认值: &#39;store&#39;
+[withRef] (Boolean): 如果为 true，则将一个引用存储到被包裹的组件实例中，并通过 getWrappedInstance() 方法使其可用。 默认值: false
+此外，通过 connectOptions 传递的任何额外选项都将传递给 factorOptions 参数中的 selectorFactory。
+
+
+
+返回值
+一个高阶 React 组件类，它从 store 的 state 生成 props 并将它们传递给被包裹的组件。高阶组件是接受组件参数并返回新组件的函数.
+静态属性
+
+WrappedComponent (Component): 原始组件类传递给 connectAdvanced(...)(Component).
+
+静态函数
+
+组件的所有原始静态方法都被挂起。
+
+实例方法
+
+getWrappedInstance(): ReactComponent
+
+返回被包裹组件的实例。只有当你传递 { withRef: true } 作为options 的参数才可用。
+注意
+
+因为 connectAdvanced 返回一个高阶组件，所以需要调用它两次。 第一次使用上面描述的参数，第二次使用组件： connectAdvanced(selectorFactory)(MyComponent).
+connectAdvanced 不修改传递的 React 组件。它返回一个新的连接组件，您应该使用它。
+
+例子：
+import * as actionCreators from &#39;./actionCreators&#39;
+import { bindActionCreators } from &#39;redux&#39;
+
+function selectorFactory(dispatch) {
+  let ownProps = {}
+  let result = {}
+  const actions = bindActionCreators(actionCreators, dispatch)
+  const addTodo = text =&amp;gt; actions.addTodo(ownProps.userId, text)
+  return (nextState, nextOwnProps) =&amp;gt; {
+    const todos = nextState.todos[nextOwnProps.userId]
+    const nextResult = { ...nextOwnProps, todos, addTodo }
+    ownProps = nextOwnProps
+    if (!shallowEqual(result, nextResult)) result = nextResult
+    return result
+  }
+}
+export default connectAdvanced(selectorFactory)(TodoApp)
+
+selectorFactory作用其实很简单，通俗来讲就是，把自己在store中选择的一些state或dispatch， ownProps进行合并，传入到组件中，并且自己也可以进行判断前后的变化，进而确定是否要更新组件
+看完上面这些介绍，我们直接开始讲源码，由于内容太多，就先只截取一部分
+export default function connectAdvanced(
+  selectorFactory,
+  {
+    getDisplayName = name =&amp;gt; `ConnectAdvanced(${name})`,
+    methodName = &#39;connectAdvanced&#39;,
+    renderCountProp = undefined,
+    shouldHandleStateChanges = true,
+    storeKey = &#39;store&#39;,
+    withRef = false,  // 如果为 true，则将一个引用存储到被包裹的组件实例中，并通过 getWrappedInstance() 方法使其可用。 默认值: false
+    forwardRef = false,
+    context = ReactReduxContext,
+    ...connectOptions
+  } = {}
+) {
+    // 。。。
+  return function wrapWithConnect(WrappedComponent) {
+      // 。。。
+      return hoistStatics(Connect, WrappedComponent)
+  }
+  // 。。。。
+  
+}
+
+整个函数最终返回了一个高阶组件，也就是被处理过的组件，我们在selectorFactory调用返回的对象，也会作为props传给原本的组件，下面跟着源码一段段分析
+  invariant(
+    renderCountProp === undefined,
+    `renderCountProp is removed. render counting is built into the latest React Dev Tools profiling extension`
+  )
+
+  invariant(
+    !withRef,
+    &#39;withRef is removed. To access the wrapped instance, use a ref on the connected component&#39;
+  )
+
+  const customStoreWarningMessage =
+    &#39;To use a custom Redux store for specific components, create a custom React context with &#39; +
+    &amp;quot;React.createContext(), and pass the context object to React Redux&#39;s Provider and specific components&amp;quot; +
+    &#39; like: &amp;lt;Provider context={MyContext}&amp;gt;&amp;lt;ConnectedComponent context={MyContext} /&amp;gt;&amp;lt;/Provider&amp;gt;. &#39; +
+    &#39;You may also pass a {context : MyContext} option to connect&#39;
+
+  invariant(
+    storeKey === &#39;store&#39;,
+    &#39;storeKey has been removed and does not do anything. &#39; +
+      customStoreWarningMessage
+  )
+  const Context = context
+
+
+
+第一个invariant:
+判断renderCountProp是否是undefined,如果是，就报出警告，这个属性基本上用不到，而且上面写了renderCountProp已删除。渲染计数内置于最新的React Dev工具分析扩展中
+
+
+第二个invariant
+判断withRef是否存在，如果存在也会报出警告，withRef被删除。要访问包装的实例，请在连接的组件上使用引用
+
+
+第三个invariant
+判断storeKey是否为store,如果是，就报出警告StoreKey已被删除，不执行任何操作。
+
+
+然后又创建了一个context,这个其实是在参数上设置了一个默认函数
+const Context = context
+
+// Context.js
+export const ReactReduxContext = React.createContext(null)
+
+
+接下来具体分析返回的高阶函数
+  return function wrapWithConnect(WrappedComponent) {
+      // 。。。
+    return hoistStatics(Connect, WrappedComponent)
+  }
+
+wrapWithConnect
+又是一大段代码，太长了。。。。，还是一点点分析
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      invariant(
+        isValidElementType(WrappedComponent),
+        `You must pass a component to the function returned by ` +
+          `${methodName}. Instead received ${stringifyComponent(
+            WrappedComponent
+          )}`
+      )
+    }
+// typescript类型保护
+export function isValidElementType(value: any): value is ReactType;
+
+这段代码简单来说就是判断组件是否是合法的组件类型,否则警告，这里就不深入介绍了
+    const wrappedComponentName =
+      WrappedComponent.displayName || WrappedComponent.name || &#39;Component&#39;
+
+    const displayName = getDisplayName(wrappedComponentName)
+    // getDisplayName = name =&amp;gt; `ConnectAdvanced(${name})`,
+    const selectorFactoryOptions = {
+      ...connectOptions,
+      getDisplayName, // 计算连接器组件相对于被包裹的组件的 DisplayName 属性。 通常被包裹函数覆盖。 默认值: name =&amp;gt; &#39;ConnectAdvanced(&#39;+name+&#39;)&#39;
+      methodName,  // 示在错误消息中。 通常被包裹函数覆盖。 默认值: &#39;connectAdvanced&#39;
+      renderCountProp,// 如果被定义, 名为此值的属性将添加到传递给被包裹组件的 props 中。它的值将是组件被渲染的次数，这对于跟踪不必要的重新渲染非常有用。默认值: undefined
+      shouldHandleStateChanges, // 控制连接器（connector）组件是否订阅 redux store 的 state 更改。 如果设置为 false，则只会在componentWillReceiveProps中重新渲染。 默认值: true
+      storeKey,// 可以获取 store 的 props/context key。 当你不明智地使用了多个 store 的时候，你才可能需要这个
+      displayName,
+      wrappedComponentName,
+      WrappedComponent
+    }
+    // connect中pure为true
+    const { pure } = connectOptions
+
+
+
+
+wrappedComponentName: 组件名称
+
+
+displayName： 拼接ConnectAdvanced后的组件名
+
+
+selectorFactoryOptions: 选项合并，其中有处理过后的组件名
+
+
+pure： 是否使用pure组件，可以对数据进行浅比较
+
+
+继续来看
+    function createChildSelector(store) {
+      return selectorFactory(store.dispatch, selectorFactoryOptions)
+    }
+	const usePureOnlyMemo = pure ? useMemo : callback =&amp;gt; callback()
+    
+    function ConnectFunction(props) {
+        //...
+    }
+    const Connect = pure ? React.memo(ConnectFunction) : ConnectFunction
+
+首先创建了一个createChildSelector内部函数，调用了selectorFactory,传入了dispatch方法和刚才的selectorFactoryOptions对象，注意此时的selectorFactoryOptions还不是最新的
+然后判断pure是否为true，如果是就使用useMemo函数，这个函数是React Hooks中的一个方法，这个函数这里简单介绍一下
+const memoizedValue = useMemo(() =&amp;gt; computeExpensiveValue(a, b), [a, b]);
+
+把“创建”函数和依赖项数组作为参数传入 useMemo，它仅会在某个依赖项改变时才重新计算 memoized 值。这种优化有助于避免在每次渲染时都进行高开销的计算。
+这句话什么意思呢，其实就是,如果a或者b发生改变，才会调用回调函数中的computeExpensiveValue,并返回了新的computeExpensiveValue返回值，这是一种优化的手段，简单介绍完useMemo，我们继续来讲
+又是一个ConnectFunction内部函数，这个暂时先不讲，内容太多
+const Connect = pure ? React.memo(ConnectFunction) : ConnectFunction
+
+然后判断pure是否为真，如果是就用React.memo创建一个pure函数式组件，这是React 16中的一个新API，React.memo() 和 PureComponent 很相似，它帮助我们控制何时重新渲染组件。
+简单点来讲就是
+
+React.memo()用于函数式组件
+PureComponent用于class组件
+
+至于用法，请大家参考官方文档，不是本文重点
+Connect.WrappedComponent = WrappedComponent
+Connect.displayName = displayName
+
+然后就是在函数上添加了两个属性
+    if (forwardRef) {
+      const forwarded = React.forwardRef(function forwardConnectRef(
+        props,
+        ref
+      ) {
+        return &amp;lt;Connect {...props} forwardedRef={ref} /&amp;gt;
+      })
+
+      forwarded.displayName = displayName
+      forwarded.WrappedComponent = WrappedComponent
+      return hoistStatics(forwarded, WrappedComponent)
+    }
+
+这段代码，判断forwardRef是否存在，这个属性也是在参数的配置对象中传入的，初始为false, 它在源码注释中的介绍是这样的使用react的forwardRef公开包装组件的引用
+      const forwarded = React.forwardRef(function forwardConnectRef(
+        props,
+        ref
+      ) {
+        return &amp;lt;Connect {...props} forwardedRef={ref} /&amp;gt;
+      })
+
+      forwarded.displayName = displayName
+      forwarded.WrappedComponent = WrappedComponent
+      return hoistStatics(forwarded, WrappedComponent)
+
+这段代码比较关键的是React.forwardRef，这也是React 16中的一个api,用过的同志们可能会比较熟悉，它可以用将ref转发到子组件中，在这里其实是把ref再次传递到了Connect组件中，注意Connect函数组件其实是ConnectFunction函数，接下来这个函数就是重点了
+ConnectFunction
+在讲这个函数组件之前，就默认为大家会React Hooks了，因为里面大量的使用到了React Hooks中的一些API,另外，由于代码太多，我将会以注释的形式讲解，有重要的会在后面单独说
+还有一件事：真的很长 。。。而且比较绕，我也是看了很久
+这段代码太长，大家如果不太好理解，参考后面总结的代码
+    function ConnectFunction(props) {
+      // 当props中有值改变，才会调用回调函数
+      const [propsContext, forwardedRef, wrapperProps] = useMemo(() =&amp;gt; {
+        const { forwardedRef, ...wrapperProps } = props
+        // 返回context, forwardedRef,wrapperProps
+        return [props.context, forwardedRef, wrapperProps]
+      }, [props])
+
+
+      // 当propsContext和Context有属性值发生变化，就会调用这里面的回调函数
+      const ContextToUse = useMemo(() =&amp;gt; {
+        // 这里使用来判断是否是原始的context还是createContext创建的context,经过处理后，返回对应的context
+        return propsContext &amp;amp;&amp;amp;
+          propsContext.Consumer &amp;amp;&amp;amp;
+          isContextConsumer(&amp;lt;propsContext.Consumer /&amp;gt;)
+          ? propsContext
+          : Context
+      }, [propsContext, Context])
+
+      // 使用useContext获取context中的值
+      const contextValue = useContext(ContextToUse)
+
+      // 判断是否是来自props中的store
+      const didStoreComeFromProps = Boolean(props.store)
+      // 判断是否是来自context中的store
+      const didStoreComeFromContext =
+        Boolean(contextValue) &amp;amp;&amp;amp; Boolean(contextValue.store)
+
+      invariant(
+        didStoreComeFromProps || didStoreComeFromContext,
+        `Could not find &amp;quot;store&amp;quot; in the context of ` +
+          `&amp;quot;${displayName}&amp;quot;. Either wrap the root component in a &amp;lt;Provider&amp;gt;, ` +
+          `or pass a custom React context provider to &amp;lt;Provider&amp;gt; and the corresponding ` +
+          `React context consumer to ${displayName} in connect options.`
+      )
+      
+      // 优先使用props中的store
+      const store = props.store || contextValue.store
+
+      // 如果store中的属性值发生了变化，才会调用回调，其中调用了selectorFactory
+      // selectorFactory是用来对props和context中的数据进行筛选和处理
+      // 这个非常重要，因为它返回的值讲作为props传给组件
+      const childPropsSelector = useMemo(() =&amp;gt; {
+        return createChildSelector(store)
+      }, [store])
+
+
+      const [subscription, notifyNestedSubs] = useMemo(() =&amp;gt; {
+        // shouldHandleStateChanges：是否处理state更改，默认为true,所以正常不会返回NO_SUBSCRIPTION_ARRAY
+        if (!shouldHandleStateChanges) return NO_SUBSCRIPTION_ARRAY
+
+        // 创建Subscription对象，
+        const subscription = new Subscription(
+          store,
+          // 如果store是来自props中的store，就传入context中的subscription对象
+          didStoreComeFromProps ? null : contextValue.subscription
+        )
+
+        // notifyNestedSubs：用来调用所有的listeners
+        // 当调用这个函数的时候，实际上调用的是contextValue.subscription中的listeners
+        const notifyNestedSubs = subscription.notifyNestedSubs.bind(
+          subscription
+        )
+
+        // 返回subscription对象和notifyNestedSubs通知函数
+        return [subscription, notifyNestedSubs]
+      }, [store, didStoreComeFromProps, contextValue])
+
+
+      // 按字面意思是用来覆盖ContextValue
+      const overriddenContextValue = useMemo(() =&amp;gt; {
+        // 如果store是来自props中的，返回contextValue
+        if (didStoreComeFromProps) {
+          return contextValue
+        }
+        return {
+          ...contextValue,
+          subscription
+        }
+      }, [didStoreComeFromProps, contextValue, subscription])
+
+
+      // userReducer:这里它的用法不做介绍，参见官网用法：https://zh-hans.reactjs.org/docs/hooks-reference.html#usereducer
+      // storeStateUpdatesReducer： 是react-redux内置reducer,用来记录更新次数
+      // EMPTY_ARRAY： 初始state
+      // initStateUpdates: 惰性初始化
+      const [
+        [previousStateUpdateResult],
+        forceComponentUpdateDispatch
+      ] = useReducer(storeStateUpdatesReducer, EMPTY_ARRAY, initStateUpdates)
+
+
+      // previousStateUpdateResult正常情况下为null ,因为initStateUpdates返回的数组第一个为null
+      if (previousStateUpdateResult &amp;amp;&amp;amp; previousStateUpdateResult.error) {
+        throw previousStateUpdateResult.error
+      }
+
+      // useRef用法参见官网：https://zh-hans.reactjs.org/docs/hooks-reference.html#useref
+      const lastChildProps = useRef()
+      const lastWrapperProps = useRef(wrapperProps)
+      const childPropsFromStoreUpdate = useRef()
+      const renderIsScheduled = useRef(false)
+
+      // usePureOnlyMemo： pure ? useMemo : callback =&amp;gt; callback()
+      const actualChildProps = usePureOnlyMemo(() =&amp;gt; {
+        if (
+          childPropsFromStoreUpdate.current &amp;amp;&amp;amp;
+          wrapperProps === lastWrapperProps.current
+        ) {
+          return childPropsFromStoreUpdate.current
+        }
+        // 这里实际上是调用了selectorFactory返回的函数
+        return childPropsSelector(store.getState(), wrapperProps)
+      }, [store, previousStateUpdateResult, wrapperProps])
+
+
+      // useEffect官网用法:https://zh-hans.reactjs.org/docs/hooks-reference.html#useeffect
+      useIsomorphicLayoutEffect(() =&amp;gt; {
+        // 一些赋值操作
+        lastWrapperProps.current = wrapperProps
+        lastChildProps.current = actualChildProps
+        renderIsScheduled.current = false
+
+        if (childPropsFromStoreUpdate.current) {
+          childPropsFromStoreUpdate.current = null
+          // 通知listeners执行
+          notifyNestedSubs()
+        }
+      })
+
+      useIsomorphicLayoutEffect(() =&amp;gt; {
+        if (!shouldHandleStateChanges) return
+        let didUnsubscribe = false
+        let lastThrownError = null
+        const checkForUpdates = () =&amp;gt; {
+          if (didUnsubscribe) {
+            return
+          }
+
+          const latestStoreState = store.getState()
+
+          let newChildProps, error
+          try {
+            // 传入最新的store和props
+            newChildProps = childPropsSelector(
+              latestStoreState,
+              lastWrapperProps.current
+            )
+          } catch (e) {
+            error = e
+            lastThrownError = e
+          }
+
+          if (!error) {
+            lastThrownError = null
+          }
+          // 如果前后的proos相同
+          if (newChildProps === lastChildProps.current) {
+            // renderIsScheduled.current为true，才会触发notifyNestedSubs
+            if (!renderIsScheduled.current) {
+              notifyNestedSubs()
+            }
+          } else {
+            lastChildProps.current = newChildProps
+            childPropsFromStoreUpdate.current = newChildProps
+            renderIsScheduled.current = true
+            // 强制组件更新的dispatch
+            forceComponentUpdateDispatch({
+              type: &#39;STORE_UPDATED&#39;,
+              payload: {
+                latestStoreState,
+                error
+              }
+            })
+          }
+        }
+
+        // 重新设置listener订阅函数
+        subscription.onStateChange = checkForUpdates
+        // 重新订阅
+        subscription.trySubscribe()
+
+        checkForUpdates()
+
+        const unsubscribeWrapper = () =&amp;gt; {
+          didUnsubscribe = true
+          subscription.tryUnsubscribe()
+          if (lastThrownError) {
+            throw lastThrownError
+          }
+        }
+
+        // 返回清除函数，这个用法在官方文档中也有示例
+        return unsubscribeWrapper
+      }, [store, subscription, childPropsSelector])
+
+      // 这里是关键，真正要渲染的组件，传入了处理后的props
+      const renderedWrappedComponent = useMemo(
+        () =&amp;gt; &amp;lt;WrappedComponent {...actualChildProps} ref={forwardedRef} /&amp;gt;,
+        [forwardedRef, WrappedComponent, actualChildProps]
+      )
+
+      // 这段代码就不多说了吧，如果了解createContext
+      const renderedChild = useMemo(() =&amp;gt; {
+        if (shouldHandleStateChanges) {
+          return (
+            &amp;lt;ContextToUse.Provider value={overriddenContextValue}&amp;gt;
+              {renderedWrappedComponent}
+            &amp;lt;/ContextToUse.Provider&amp;gt;
+          )
+        }
+
+        return renderedWrappedComponent
+      }, [ContextToUse, renderedWrappedComponent, overriddenContextValue])
+
+      // 返回组件
+      return renderedChild
+    }
+
+接下来我将代码缩减，来整体说明connectAdvanced做了哪些事
+function connectAdvanced(...args) {
+    return function wrapWithConnect(WrappedComponent) {
+        // 组件名
+        const displayName = ComponentName
+        // 一些配置
+        const selectorFactoryOptions = {
+            ...arg,
+            ...options
+        }
+        // 判断是否应该使用pure组件
+        const usePureOnlyMemo = pure ? useMemo : callback =&amp;gt; callback()
+        
+        function ConnectFunction(props) {
+          // props变化，获取最新的context,forwardedRef以及组件其他props
+          const [propsContext, forwardedRef, wrapperProps] = useMemo(() =&amp;gt; {...}, [props])
+          
+          // propsContext或Context发生变化，如果propsContext存在则优先使用
+          const ContextToUse = useMemo(() =&amp;gt; {...}, [propsContext, Context])}
+                                       
+          // 获取context中的值，也就是store
+          const contextValue = useContext(ContextToUse)
+          
+          // 判断是否是来自props中的store
+      	  const didStoreComeFromProps = Boolean(props.store)
+          
+          // 判断是否是来自context中的store
+          const didStoreComeFromContext = Boolean(contextValue) &amp;amp;&amp;amp; Boolean(contextValue.store)
+          
+          // 优先使用props中的store
+      	  const store = props.store || contextValue.store
+          
+          // 创建Selector
+          const childPropsSelector = useMemo(() =&amp;gt; {
+              ...
+        	  return createChildSelector(store)
+          }, [store])
+          
+          // 创建subscription对象和notifyNestedSubs函数
+          const [subscription, notifyNestedSubs] = useMemo(() =&amp;gt; {
+              ...
+        	  return [subscription, notifyNestedSubs]
+      	  }, [store, didStoreComeFromProps, contextValue])
+          
+          // 覆盖ContextValue，其实就是覆盖store
+          const overriddenContextValue = useMemo(() =&amp;gt; {
+              ...
+              return {
+                  ...contextValue,
+                  subscription
+              }
+      	  }, [didStoreComeFromProps, contextValue, subscription])
+          
+          // react-redux内置reducer,用来记录更新次数
+          const [
+            [previousStateUpdateResult],
+            forceComponentUpdateDispatch
+          ] = useReducer(storeStateUpdatesReducer, EMPTY_ARRAY, initStateUpdates)
+          
+          // 调用selector并传入返回函数最新的state以及组件props(不包含context)
+          // 返回的actualChildProps，将用来传给要被包装的组件
+          const actualChildProps = usePureOnlyMemo(() =&amp;gt; {
+			 ...
+              return childPropsSelector(store.getState(), wrapperProps)
+          }, [store, previousStateUpdateResult, wrapperProps])    
+          
+          // 一些属性的初始化
+          useIsomorphicLayoutEffect(() =&amp;gt; {
+         	
+      	  })
+                                                                            
+          useIsomorphicLayoutEffect(() =&amp;gt; {
+            // 调用内置reducer,记录更新次数，强制组件更新，因为subscription订阅了该函数，所以能触发组件更新
+              const checkForUpdates = () =&amp;gt; {}
+                 // 检查state是否更新的listener
+                subscription.onStateChange = checkForUpdates
+                 // 调用listeners
+                 subscription.trySubscribe()
+                 // 先调用一次进行初始化
+                 checkForUpdates()
+              })         
+              // 清除订阅                                                                  
+             const unsubscribeWrapper = () =&amp;gt; { ... }      
+          })
+          
+          // 最终的被包装组件，传入了最新的props
+          const renderedWrappedComponent = useMemo(
+            () =&amp;gt; &amp;lt;WrappedComponent {...actualChildProps} ref={forwardedRef} /&amp;gt;,
+            [forwardedRef, WrappedComponent, actualChildProps]
+          )
+          
+          const renderedChild = useMemo(() =&amp;gt; {
+            if (shouldHandleStateChanges) {
+              return (
+                &amp;lt;ContextToUse.Provider value={overriddenContextValue}&amp;gt;
+                  {renderedWrappedComponent}
+                &amp;lt;/ContextToUse.Provider&amp;gt;
+              )
+            }
+            return renderedWrappedComponent
+          }, [ContextToUse, renderedWrappedComponent, overriddenContextValue])
+          
+          // 返回真正的高阶组件
+          return renderedChild
+	  }	
+      
+      // 防止Component上面绑定了一些static方法丢失
+      return hoistStatics(ConnectFunction, WrappedComponent)
+    }
+}
+
+终于讲完了connectAdvanced,其实整体理解起来并不困难，比较难的是大量使用到了React Hooks，通过这一部分的学习，也让我对这些hooks有了更多的认识与理解
+connect
+下面来看connect的源码实现
+首先截取到connect.js里的关键代码
+export function createConnect({
+  connectHOC = connectAdvanced,
+  mapStateToPropsFactories = defaultMapStateToPropsFactories,
+  mapDispatchToPropsFactories = defaultMapDispatchToPropsFactories,
+  mergePropsFactories = defaultMergePropsFactories,
+  selectorFactory = defaultSelectorFactory
+} = {}) {
+  return function connect(
+    mapStateToProps,
+    mapDispatchToProps,
+    mergeProps,
+    {
+      pure = true,
+      areStatesEqual = strictEqual,
+      areOwnPropsEqual = shallowEqual,
+      areStatePropsEqual = shallowEqual,
+      areMergedPropsEqual = shallowEqual,
+      ...extraOptions
+    } = {}
+  ) {
+
+
+    // 如果定义该参数，组件将会监听 Redux store 的变化。任何时候，只要 Redux store 发生改变，mapStateToProps 函数就会被调用
+    // 该回调函数必须返回一个纯对象，这个对象会与组件的 props 合并。如果你省略了这个参数，你的组件将不会监听 Redux store。
+    // 如果指定了该回调函数中的第二个参数 ownProps，则该参数的值为传递到组件的 props，
+    // 而且只要组件接收到新的 props，mapStateToProps 也会被调用
+    // （例如，当 props 接收到来自父组件一个小小的改动，那么你所使用的 ownProps 参数，mapStateToProps 都会被重新计算）。
+    const initMapStateToProps = match(
+      mapStateToProps,
+      mapStateToPropsFactories,
+      &#39;mapStateToProps&#39;
+    )
+
+    const initMapDispatchToProps = match(
+      mapDispatchToProps,
+      mapDispatchToPropsFactories,
+      &#39;mapDispatchToProps&#39;
+    )
+
+    const initMergeProps = match(mergeProps, mergePropsFactories, &#39;mergeProps&#39;)
+    return connectHOC(selectorFactory, {
+      // used in error messages
+      methodName: &#39;connect&#39;,
+
+      // used to compute Connect&#39;s displayName from the wrapped component&#39;s displayName.
+      getDisplayName: name =&amp;gt; `Connect(${name})`,
+
+      // if mapStateToProps is falsy, the Connect component doesn&#39;t subscribe to store state changes
+      shouldHandleStateChanges: Boolean(mapStateToProps),
+      initMapStateToProps,
+      initMapDispatchToProps,
+      initMergeProps,
+      pure,
+      areStatesEqual,
+      areOwnPropsEqual,
+      areStatePropsEqual,
+      areMergedPropsEqual,
+
+      // any extra options args can override defaults of connect or connectAdvanced
+      ...extraOptions
+    })
+  }
+}
+
+
+其他不看，一步一步分析
+mapStateToProps
+    const initMapStateToProps = match(
+      mapStateToProps,
+      mapStateToPropsFactories,
+      &#39;mapStateToProps&#39;
+    )
+
+
+
+mapStateToProps: connect传入的
+
+
+mapStateToPropsFactories:
+它是一个数组，包含以下两个函数，我们先暂时不讲
+import { wrapMapToPropsConstant, wrapMapToPropsFunc } from &#39;./wrapMapToProps&#39;
+export function whenMapStateToPropsIsFunction(mapStateToProps) {
+  // 判断是否是函数，如果是调用wrapMapToPropsFunc
+  return typeof mapStateToProps === &#39;function&#39;
+    ? wrapMapToPropsFunc(mapStateToProps, &#39;mapStateToProps&#39;)
+    : undefined
+}
+
+export function whenMapStateToPropsIsMissing(mapStateToProps) {
+  return !mapStateToProps ? wrapMapToPropsConstant(() =&amp;gt; ({})) : undefined
+}
+
+export default [whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]
+
+
+
+
+关键是match方法
+function match(arg, factories, name) {
+  for (let i = factories.length - 1; i &amp;gt;= 0; i--) {
+    const result = factories[i](arg)
+    if (result) return result
+  }
+  return (dispatch, options) =&amp;gt; {
+    throw new Error(
+      `Invalid value of type ${typeof arg} for ${name} argument when connecting component ${
+        options.wrappedComponentName
+      }.`
+    )
+  }
+}
+
+match函数实现就比较简单了，从右到左依次调用[whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing], 并传入mapStateToProps函数，拿到调用结果后返回，如果结果不存在就返回一个会抛出错误的函数，这是为了防止传入不合法的mapStateToProps
+现在我们知道mapStateToProps需要经过两个函数的处理才能拿到真正的mapStateToProps,我们来具体看看其实现
+// mapStateToProps.js
+export function whenMapStateToPropsIsFunction(mapStateToProps) {
+  // 判断是否是函数，如果是调用wrapMapToPropsFunc
+  return typeof mapStateToProps === &#39;function&#39;
+    ? wrapMapToPropsFunc(mapStateToProps, &#39;mapStateToProps&#39;)
+    : undefined
+}
+
+首先判断是否是一个函数，如果不是返回undefined，此时大家可以想到，这是不合法的类型，前面讲到的如果类型不合法，会返回一个抛出错误的函数，现在看来，match函数，除了调用工厂函数，还对错误进行了统一处理，它可以处理mapStateToProps和mapDispatchToProps
+如果是一个函数，调用wrapMapToPropsFunc,并继续把mapStateToProps传递进去，这个wrapMapToPropsFunc其实不单单对mapStateToProps进行了处理，还对mapDispatchToProps做了处理，我只单独讲一种情况
+export function wrapMapToPropsFunc(mapToProps, methodName) {
+  // 返回一个新方法
+  return function initProxySelector(dispatch, { displayName }) {
+    const proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
+      return proxy.dependsOnOwnProps
+        ? proxy.mapToProps(stateOrDispatch, ownProps)
+        : proxy.mapToProps(stateOrDispatch)
+    }
+    proxy.dependsOnOwnProps = true
+    proxy.mapToProps = function detectFactoryAndVerify(
+      stateOrDispatch,
+      ownProps
+    ) {
+      // 把真实的mapToProps函数赋给代理方法的mapToProps
+      proxy.mapToProps = mapToProps
+      // 获取OwnProps
+      proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps)
+      let props = proxy(stateOrDispatch, ownProps)
+      
+      if (typeof props === &#39;function&#39;) {
+        proxy.mapToProps = props
+        proxy.dependsOnOwnProps = getDependsOnOwnProps(props)
+        props = proxy(stateOrDispatch, ownProps)
+      }
+      if (process.env.NODE_ENV !== &#39;production&#39;)
+        verifyPlainObject(props, displayName, methodName)
+      return props
+    }
+
+    return proxy
+  }
+}
+
+
+整体看下来，其实最终返回了一个代理函数proxy，我们针对它的属性和方法来讲解
+
+
+proxy函数
+    const proxy = function mapToPropsProxy(stateOrDispatch, ownProps) {
+      return proxy.dependsOnOwnProps
+        ? proxy.mapToProps(stateOrDispatch, ownProps)
+        : proxy.mapToProps(stateOrDispatch)
+    }
+
+这个其实就是处理过后的mapStateToProps或者mapDispatchToProps
+如果指定了该函数中的第二个参数 ownProps，则该参数的值为传递到组件的 props，而且只要组件接收到新的 props，mapStateToProps 也会被调用（例如，当 props 接收到来自父组件一个小小的改动，那么你所使用的 ownProps 参数，mapStateToProps 都会被重新计算）。
+
+
+proxy.dependsOnOwnProps
+默认为true
+
+
+proxy.mapToProps
+    proxy.mapToProps = function detectFactoryAndVerify(
+      stateOrDispatch,
+      ownProps
+    ) {
+      // 把真实的mapToProps函数赋给代理方法的mapToProps
+      proxy.mapToProps = mapToProps
+      // 获取OwnProps
+      proxy.dependsOnOwnProps = getDependsOnOwnProps(mapToProps)
+		
+      // 调用了mapStateToProps,传入state，以及我们手动传入的props
+      let props = proxy(stateOrDispatch, ownProps)
+      
+      if (typeof props === &#39;function&#39;) {
+        proxy.mapToProps = props
+        proxy.dependsOnOwnProps = getDependsOnOwnProps(props)
+        props = proxy(stateOrDispatch, ownProps)
+      }
+      if (process.env.NODE_ENV !== &#39;production&#39;)
+        verifyPlainObject(props, displayName, methodName)
+      return props
+    }
+
+
+这段函数，调用了其实还是调用了mapStateToProps或者mapDipsatchToProps，拿到返回的state或者dispatch，最终返回，至于其他东西实际上上是对OwnProps做的一些处理
+
+
+我们会到之前说的那两个函数，已讲其一, 注意：之前忘记说了，whenMapStateToPropsIsMissing函数实际上是先执行的。。
+export function whenMapStateToPropsIsFunction(mapStateToProps) {
+  // 判断是否是函数，如果是调用wrapMapToPropsFunc
+  return typeof mapStateToProps === &#39;function&#39;
+    ? wrapMapToPropsFunc(mapStateToProps, &#39;mapStateToProps&#39;)
+    : undefined
+}
+export function whenMapStateToPropsIsMissing(mapStateToProps) {
+  return !mapStateToProps ? wrapMapToPropsConstant(() =&amp;gt; ({})) : undefined
+}
+
+export default [whenMapStateToPropsIsFunction, whenMapStateToPropsIsMissing]
+
+export function whenMapStateToPropsIsMissing(mapStateToProps) {
+  return !mapStateToProps ? wrapMapToPropsConstant(() =&amp;gt; ({})) : undefined
+}
+
+whenMapStateToPropsIsMissing函数实现就非常简单了，它是防止我们没有传入mapStateToProps,就设置了一个默认函数，他没有做任何事情
+讲完上面这些，回到connect函数
+
+    const initMapDispatchToProps = match(
+      mapDispatchToProps,
+      mapDispatchToPropsFactories,
+      &#39;mapDispatchToProps&#39;
+    )
+    
+   
+
+需要注意的是,它的第二个参数是mapDispatchToPropsFactories
+mapDispatchToProps
+import { bindActionCreators } from &#39;redux&#39;
+import { wrapMapToPropsConstant, wrapMapToPropsFunc } from &#39;./wrapMapToProps&#39;
+
+export function whenMapDispatchToPropsIsFunction(mapDispatchToProps) {
+  return typeof mapDispatchToProps === &#39;function&#39;
+    ? wrapMapToPropsFunc(mapDispatchToProps, &#39;mapDispatchToProps&#39;)
+    : undefined
+}
+
+export function whenMapDispatchToPropsIsMissing(mapDispatchToProps) {
+  return !mapDispatchToProps
+    ? wrapMapToPropsConstant(dispatch =&amp;gt; ({ dispatch }))
+    : undefined
+}
+
+export function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
+  return mapDispatchToProps &amp;amp;&amp;amp; typeof mapDispatchToProps === &#39;object&#39;
+    ? wrapMapToPropsConstant(dispatch =&amp;gt;
+        bindActionCreators(mapDispatchToProps, dispatch)
+      )
+    : undefined
+}
+
+export default [
+  whenMapDispatchToPropsIsFunction,
+  whenMapDispatchToPropsIsMissing,
+  whenMapDispatchToPropsIsObject
+]
+
+
+可以看到，mapDispatchToProps,经过了三次处理，其他两个不讲，主要讲一下whenMapDispatchToPropsIsObject
+export function whenMapDispatchToPropsIsObject(mapDispatchToProps) {
+  return mapDispatchToProps &amp;amp;&amp;amp; typeof mapDispatchToProps === &#39;object&#39;
+    ? wrapMapToPropsConstant(dispatch =&amp;gt;
+        bindActionCreators(mapDispatchToProps, dispatch)
+      )
+    : undefined
+}
+
+在看这段代码之前，我其实是不知道actionCreator可以直接作为mapDispatchToProps的，如果传递的是一个对象，那么每个定义在该对象的函数都将被当作 Redux action creator，对象所定义的方法名将作为属性名，举个例子
+import actionCreators from &#39;./actionCreators&#39;
+connct(mapStateToProps, actionCreators)(App)
+
+在来看看wrapMapToPropsConstant函数实现,直接看注释
+export function wrapMapToPropsConstant(getConstant) {
+  return function initConstantSelector(dispatch, options) {
+    // 调用getConstant，实际上调用了bindActionCreators
+    const constant = getConstant(dispatch, options)
+    function constantSelector() {
+      return constant
+    }
+    // 没有依赖自己定义的props
+    constantSelector.dependsOnOwnProps = false
+    // 返回新mapDispatchToProps函数
+    return constantSeletor
+  }
+}
+
+讲完mapDispatchToProps回到connect
+mergeProps
+ const initMergeProps = match(mergeProps, mergePropsFactories, &#39;mergeProps&#39;)
+
+mergeProps是什么鬼，其实在看源码之前，我是不知道这个api的，官网说明是这样的:
+[mergeProps(stateProps, dispatchProps, ownProps): props] (Function): 如果指定了这个参数，mapStateToProps() 与 mapDispatchToProps() 的执行结果和组件自身的 props 将传入到这个回调函数中。该回调函数返回的对象将作为 props 传递到被包装的组件中。你也许可以用这个回调函数，根据组件的 props 来筛选部分的 state 数据，或者把 props 中的某个特定变量与 action creator 绑定在一起。如果你省略这个参数，默认情况下返回 Object.assign({}, ownProps, stateProps, dispatchProps) 的结果。
+好东西！这个API，其实挺有用的，可以对props中的state, dispatch, ownProps进行筛选，它是一个函数，返回值将作为props传给组件
+说完这些有个东西需要注意,mergePropsFactories,第二个参数是mergePropsFactories
+export function whenMergePropsIsFunction(mergeProps) {
+  return typeof mergeProps === &#39;function&#39;
+    ? wrapMergePropsFunc(mergeProps)
+    : undefined
+}
+
+export function whenMergePropsIsOmitted(mergeProps) {
+  return !mergeProps ? () =&amp;gt; defaultMergeProps : undefined
+}
+
+export default [whenMergePropsIsFunction, whenMergePropsIsOmitted]
+
+
+其他不看，只看wrapMergePropsFunc
+export function wrapMergePropsFunc(mergeProps) {
+  return function initMergePropsProxy(
+    dispatch,
+    { displayName, pure, areMergedPropsEqual }
+  ) {
+    let hasRunOnce = false
+    let mergedProps
+
+    return function mergePropsProxy(stateProps, dispatchProps, ownProps) {
+      const nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps)
+
+      if (hasRunOnce) {
+        if (!pure || !areMergedPropsEqual(nextMergedProps, mergedProps))
+          mergedProps = nextMergedProps
+      } else {
+        hasRunOnce = true
+        mergedProps = nextMergedProps
+
+        if (process.env.NODE_ENV !== &#39;production&#39;)
+          verifyPlainObject(mergedProps, displayName, &#39;mergeProps&#39;)
+      }
+
+      return mergedProps
+    }
+  }
+}
+
+其实看过mergeProps用法的同学，猜都能猜到它做了什么，没错，传入三个参数
+ const nextMergedProps = mergeProps(stateProps, dispatchProps, ownProps)
+
+最终还是返回了这个合并后的props，其他的我就不讲了，也很好理解
+再回到conncet
+    return connectHOC(selectorFactory, {
+      // used in error messages
+      methodName: &#39;connect&#39;,
+
+      // used to compute Connect&#39;s displayName from the wrapped component&#39;s displayName.
+      getDisplayName: name =&amp;gt; `Connect(${name})`,
+
+      // if mapStateToProps is falsy, the Connect component doesn&#39;t subscribe to store state changes
+      shouldHandleStateChanges: Boolean(mapStateToProps),
+      initMapStateToProps,
+      initMapDispatchToProps,
+      initMergeProps,
+      pure,
+      areStatesEqual,
+      areOwnPropsEqual,
+      areStatePropsEqual,
+      areMergedPropsEqual,
+
+      // any extra options args can override defaults of connect or connectAdvanced
+      ...extraOptions
+    })
+
+connectHOC其实就是connectAdvanced,这在前面也有讲过，它最终返回了一个高阶组件，而且是pure组件，这里我们主要关注selectorFactory
+export default function finalPropsSelectorFactory(
+  dispatch,
+  { initMapStateToProps, initMapDispatchToProps, initMergeProps, ...options }
+) {
+  const mapStateToProps = initMapStateToProps(dispatch, options)
+  const mapDispatchToProps = initMapDispatchToProps(dispatch, options)
+  const mergeProps = initMergeProps(dispatch, options)
+
+  if (process.env.NODE_ENV !== &#39;production&#39;) {
+    verifySubselectors(
+      mapStateToProps,
+      mapDispatchToProps,
+      mergeProps,
+      options.displayName
+    )
+  }
+
+  const selectorFactory = options.pure
+    ? pureFinalPropsSelectorFactory
+    : impureFinalPropsSelectorFactory
+
+  return selectorFactory(
+    mapStateToProps,
+    mapDispatchToProps,
+    mergeProps,
+    dispatch,
+    options
+  )
+}
+
+这段代码其实也挺好理解，前三行调用了被处理过的mapStateToProps,mapDispatchToProps, mergeProps，拿到最新的props，然后是对这些props进行校验
+  const selectorFactory = options.pure
+    ? pureFinalPropsSelectorFactory
+    : impureFinalPropsSelectorFactory
+
+然后是这一段，pure在默认情况下为true
+一看吓一跳，又是这么长的代码。。。。,
+export function pureFinalPropsSelectorFactory(
+  mapStateToProps,
+  mapDispatchToProps,
+  mergeProps,
+  dispatch,
+  { areStatesEqual, areOwnPropsEqual, areStatePropsEqual }
+) {
+  let hasRunAtLeastOnce = false
+  let state
+  let ownProps
+  let stateProps
+  let dispatchProps
+  let mergedProps
+
+  // ....
+  return function pureFinalPropsSelector(nextState, nextOwnProps) {
+    return hasRunAtLeastOnce
+      ? handleSubsequentCalls(nextState, nextOwnProps)
+      : handleFirstCall(nextState, nextOwnProps)
+  }
+}
+
+其他我先省略掉，太多，只看返回的函数,从名字就可以知道，它是最终的selector，我们去看下它是在哪被调用的
+// connectAdvanced.js    
+
+const selectorFactoryOptions = {
+  ...connectOptions,
+  getDisplayName, // 计算连接器组件相对于被包裹的组件的 DisplayName 属性。 通常被包裹函数覆盖。 默认值: name =&amp;gt; &#39;ConnectAdvanced(&#39;+name+&#39;)&#39;
+  methodName,  // 示在错误消息中。 通常被包裹函数覆盖。 默认值: &#39;connectAdvanced&#39;
+  renderCountProp,// 如果被定义, 名为此值的属性将添加到传递给被包裹组件的 props 中。它的值将是组件被渲染的次数，这对于跟踪不必要的重新渲染非常有用。默认值: undefined
+  shouldHandleStateChanges, // 控制连接器（connector）组件是否订阅 redux store 的 state 更改。 如果设置为 false，则只会在componentWillReceiveProps中重新渲染。 默认值: true
+  storeKey,// 可以获取 store 的 props/context key。 当你不明智地使用了多个 store 的时候，你才可能需要这个
+  displayName,
+  wrappedComponentName,
+  WrappedComponent
+}
+
+...
+function createChildSelector(store) {
+   return selectorFactory(store.dispatch, selectorFactoryOptions)
+}
+
+...
+const childPropsSelector = useMemo(() =&amp;gt; {
+    return createChildSelector(store)
+}, [store])
+
+如果是第一次调用hasRunAtLeastOnce肯定为false,所以会执行handleFirstCall
+  function handleFirstCall(firstState, firstOwnProps) {
+    state = firstState  // dispatch
+    ownProps = firstOwnProps  // selectorFactoryOptions
+    stateProps = mapStateToProps(state, ownProps)
+    dispatchProps = mapDispatchToProps(dispatch, ownProps)
+    mergedProps = mergeProps(stateProps, dispatchProps, ownProps)
+    hasRunAtLeastOnce = true
+    return mergedProps 
+  }
+
+
+看完这些需要注意：hasRunAtLeastOnce = true,也就说它只能被执行依次，下一次将会执行impureFinalPropsSelectorFactory
+export function impureFinalPropsSelectorFactory(
+  mapStateToProps,
+  mapDispatchToProps,
+  mergeProps,
+  dispatch
+) {
+  return function impureFinalPropsSelector(state, ownProps) {
+    return mergeProps(
+      mapStateToProps(state, ownProps),
+      mapDispatchToProps(dispatch, ownProps),
+      ownProps
+    )
+  }
+}
+
+这段代码，eemmmm,各位大佬还需要我说吗。。
+所以整个finalPropsSelectorFactory函数做的事情就是，判断是否是第一次执行来返回对应的selector
+至此connect也讲完了，还有那些api还没讲呢
+  useDispatch,
+  useSelector,
+  useStore,
+  shallowEqual
+
+还有这些，看源码的道路真的很漫长，。
+useStore
+可以拿到context中的store
+export function useStore() {
+  const { store } = useReduxContext()
+  return store
+}
+
+export function useReduxContext() {
+  const contextValue = useContext(ReactReduxContext)
+  invariant(
+    contextValue,
+    &#39;could not find react-redux context value; please ensure the component is wrapped in a &amp;lt;Provider&amp;gt;&#39;
+  )
+  return contextValue
+}
+
+它的实现也很简单，利用了useContext这个React Hooks
+useDispatch
+拿到store中的dispatch函数
+export function useDispatch() {
+  const store = useStore()
+  return store.dispatch
+}
+
+本质上调用了useStore,返回store.dispatch
+useSelector
+能自定义selector，筛选数据
+export function useSelector(selector, equalityFn = refEquality) {
+  invariant(selector, `You must pass a selector to useSelectors`)
+
+  // 
+  const { store, subscription: contextSub } = useReduxContext()
+ 
+  const [, forceRender] = useReducer(s =&amp;gt; s + 1, 0)
+
+  // 如果store发生变化，Subscription对象
+  const subscription = useMemo(() =&amp;gt; new Subscription(store, contextSub), [
+    store,
+    contextSub
+  ])
+
+  const latestSubscriptionCallbackError = useRef()
+  // 最新的selector
+  const latestSelector = useRef()
+  // 最新的selector返回的state
+  const latestSelectedState = useRef()
+
+  let selectedState
+
+  try {
+    if (
+      selector !== latestSelector.current ||
+      latestSubscriptionCallbackError.current
+    ) {
+      // 第一次调用selector,传入最新的state
+      selectedState = selector(store.getState())
+    } else {
+      selectedState = latestSelectedState.current
+    }
+  } catch (err) {
+    let errorMessage = `An error occured while selecting the store state: ${err.message}.`
+
+    if (latestSubscriptionCallbackError.current) {
+      errorMessage += `\nThe error may be correlated with this previous error:\n${latestSubscriptionCallbackError.current.stack}\n\nOriginal stack trace:`
+    }
+
+    throw new Error(errorMessage)
+  }
+
+    // 使用useIsomorphicLayoutEffect能够执行一些副作用操作
+  useIsomorphicLayoutEffect(() =&amp;gt; {
+    latestSelector.current = selector
+    latestSelectedState.current = selectedState
+    latestSubscriptionCallbackError.current = undefined
+  })
+
+  useIsomorphicLayoutEffect(() =&amp;gt; {
+    function checkForUpdates() {
+      try {
+        // 调用selector
+        const newSelectedState = latestSelector.current(store.getState())
+        if (equalityFn(newSelectedState, latestSelectedState.current)) {
+          return
+        }
+
+         // 设置最新的state
+        latestSelectedState.current = newSelectedState
+      } catch (err) {
+        latestSubscriptionCallbackError.current = err
+      }
+
+      // 强制组件渲染
+      forceRender({})
+    }
+
+    // 重新设置通知函数
+    subscription.onStateChange = checkForUpdates
+    // 订阅checkForUpdates函数
+    subscription.trySubscribe()
+    checkForUpdates()
+    return () =&amp;gt; subscription.tryUnsubscribe()
+  }, [store, subscription])
+  return selectedState
+}
+
+
+整个函数所作的事
+
+设置最新的selector和它返回的最新state，下次调用如果没有发生变化，就使用之前的state
+在组件渲染以后，重新订阅checkForUpdates函数, 当调用dispatch,更新state,会触发checkForUpdates,执行selector,传入最新的state
+
+总结
+整篇文章总体来说，写的不太好，因为react-redux相对redux更难一些，也比较绕，不太好写，有很多东西可能没有讲到，在以后我会继续补充这篇文章，有问题欢迎指正，谢谢
+下一章
+逐行级源码分析系列(三) Vue-Router源码
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://1131153523.github.io/post/3QTzMfYA8/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+            <article class="post i-card">
+                <h2 class="post-title">
+                    <a href="https://1131153523.github.io/post/zhu-xing-ji-yuan-ma-fen-xi-xi-lie-yi-vuex/">
+                        逐行级源码分析系列(一) Vuex
+                    </a>
+                </h2>
+                <div class="post-info">
+                    <time class="post-time">2019-08-09</time>
+                    
+                        <a href="https://1131153523.github.io/tag/Xi1f-fGA_2/" class="post-tag i-tag
+                            i-tag-">
+            #Vue
+        </a>
+                        
+                </div>
+                <div class="post-article">
+                    
+                        <a href="https://1131153523.github.io/post/zhu-xing-ji-yuan-ma-fen-xi-xi-lie-yi-vuex/" class="post-feature-image" style="background-image:url(https://vuex.vuejs.org/flow.png) ">
+                        </a>
+                        
+                            <div class="post-content">
+                                
+                                        <div class="post-content-content">
+                                            前言
+首先这篇文章也是本人第一次发这种技术文章，错别字，分析错误，不知道的东西在所难免，希望大家指正，目前本人还是一位即将大四的学生，写这个系列的目的也是为了记录在源码中学习，通过写博客让我更加熟悉了源码及其内部完完整整的实现，通过这篇文章也让我对vuex的源码变得非常熟悉，在写这完篇文章之前，因为时间原因，断断续续写了两个星期，虽然已经看完了，但是要全部分析完并写出来，太耗费精力和时间。然后这个系列我打算按照这个顺序来写，我会尽量写完，也并非大放厥词，以下本人都已看完源码，排版可能有点差，我会慢慢学习，如果里面有错误，大佬轻喷。。
+
+逐行级源码分析系列(一) Vuex 源码
+逐行级源码分析系列(二) Redux和React-Redux源码
+逐行级源码分析系列(三) Vue-Router源码
+逐行级源码分析系列(四) React-Router-Dom源码
+逐行级源码分析系列(五) Express源码
+逐行级源码分析系列(六) Koa核心源码
+逐行级源码分析系列(六) Typescript版Axios源码
+
+install
+当我们使用Vue.use会调用vuex的install方法，它的实现如下
+export function install (_Vue) {
+  if (Vue &amp;amp;&amp;amp; _Vue === Vue) {
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      console.error(
+        &#39;[vuex] already installed. Vue.use(Vuex) should be called only once.&#39;
+      )
+    }
+    return
+  }
+  Vue = _Vue
+  applyMixin(Vue)
+}
+
+
+这个方法传入了Vue构造函数,然后判断如果_Vue === Vue，则说明已经安装过了就直接返回，不做处理。然后调用了applyMixin(Vue)方法，我们来看下applyMixin方法实现
+applyMixin
+
+export default function (Vue) {
+  const version = Number(Vue.version.split(&#39;.&#39;)[0])
+  if (version &amp;gt;= 2) {
+    // 混入beforeCreate，vuexInit方法
+    Vue.mixin({ beforeCreate: vuexInit })
+  } else {
+    const _init = Vue.prototype._init
+    // 重写_init方法，把vuexInit方法，挂载到options中
+    Vue.prototype._init = function (options = {}) {
+      // 这里做了兼容处理，如果有其他库也使用了init方法，就把vuexInit添加到Init数组中
+      options.init = options.init
+        ? [vuexInit].concat(options.init)
+        : vuexInit
+      _init.call(this, options)
+    }
+  }
+
+  /**
+   * Vuex init hook, injected into each instances init hooks list.
+   */
+
+   // 这个方法的作用就是可以让每个组件都能通过this.$store放问到store对象
+  function vuexInit () {
+    // 获取mergeoptios选线
+    const options = this.$options
+    // 如果存在store属性
+    if (options.store) {
+      // 如果store是一个方法，就调用store，否则直接使用
+      this.$store = typeof options.store === &#39;function&#39;
+        ? options.store()
+        : options.store
+    } else if (options.parent &amp;amp;&amp;amp; options.parent.$store) {
+      // 获取父亲的$store属性
+      this.$store = options.parent.$store
+    }
+  }
+}
+
+
+其实整个函数看起来似乎有点复杂
+Vue.mixin({ beforeCreate: vuexInit })
+
+其实只是调用了这段代码,因为这是vue2.0版本及以上才有的方法，我们这里只讨论vue2.0的情况，关于mixin的用法，这里不做介绍，它为所有的组件添加beforeCreate生命周期钩子
+下面我们看一下vuexInit方法的实现
+   // 这个方法的作用就是可以让每个组件都能通过this.$store放问到store对象
+  function vuexInit () {
+    // 获取mergeoptions的选项
+    const options = this.$options
+    // 这段if逻辑其实实在根组件中，添加了一个store属性，并赋给this.$store
+    if (options.store) {
+      // 如果store是一个方法，就调用store，否则直接使用
+      this.$store = typeof options.store === &#39;function&#39;
+        ? options.store()
+        : options.store
+    } else if (options.parent &amp;amp;&amp;amp; options.parent.$store) {
+      // 获取父亲的$store属性
+      this.$store = options.parent.$store
+    }
+  }
+
+首先，获取了this.$options,这段代码，如果大家有看过vue源码的应该知道，这是mergeOptions后的options, 先是判断是否存在store属性，如果不存在，就在父组件中查找，如果有就使用父组件中的$store，通过这种方式，能够在组件之间形成一种链式查找，其实本质上是引用了，根组件中的store,举个例子
+new Vue({
+  router,
+  store,   // $store实际最终指向的都是这里的store
+  render: h =&amp;gt; h(App)
+}).$mount(&#39;#app&#39;)
+
+new Vuex.Store(options)
+安装install完成之后，我们来看看new Vuex.Store(options)发生了什么,由于源码太多，就只截取构造函数中的代码，一起来看，vuex进行了哪些初始化操作
+  constructor (options = {}) {
+    if (!Vue &amp;amp;&amp;amp; typeof window !== &#39;undefined&#39; &amp;amp;&amp;amp; window.Vue) {
+      install(window.Vue)
+    }
+
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      assert(Vue, `must call Vue.use(Vuex) before creating a store instance.`)
+      assert(typeof Promise !== &#39;undefined&#39;, `vuex requires a Promise polyfill in this browser.`)
+      assert(this instanceof Store, `store must be called with the new operator.`)
+    }
+
+    const {
+      plugins = [],
+      strict = false //使 Vuex store 进入严格模式，在严格模式下，任何 mutation 处理函数以外修改 Vuex state 都会抛出错误。
+    } = options
+
+
+    this._committing = false   // 正在提交
+    this._actions = Object.create(null)  // actions对象
+    this._actionSubscribers = []  // actions订阅数组
+    this._mutations = Object.create(null)  
+    this._wrappedGetters = Object.create(null)
+    this._modules = new ModuleCollection(options)  // 收集modules,
+    this._modulesNamespaceMap = Object.create(null)
+    this._subscribers = []
+    this._watcherVM = new Vue()
+
+    // bind commit and dispatch to self
+    const store = this
+    const { dispatch, commit } = this
+    this.dispatch = function boundDispatch (type, payload) {
+      return dispatch.call(store, type, payload)
+    }
+    this.commit = function boundCommit (type, payload, options) {
+      return commit.call(store, type, payload, options)
+    }
+
+    // strict mode
+    this.strict = strict
+
+    // 根module的state属性
+    const state = this._modules.root.state
+
+    // init root module.
+    // this also recursively registers all sub-modules
+    // and collects all module getters inside this._wrappedGetters
+    installModule(this, state, [], this._modules.root)
+
+    // initialize the store vm, which is responsible for the reactivity
+    // (also registers _wrappedGetters as computed properties)
+    resetStoreVM(this, state)
+
+    // apply plugins
+    plugins.forEach(plugin =&amp;gt; plugin(this))
+
+    const useDevtools = options.devtools !== undefined ? options.devtools : Vue.config.devtools
+    if (useDevtools) {
+      devtoolPlugin(this)
+    }
+  }
+
+
+    if (!Vue &amp;amp;&amp;amp; typeof window !== &#39;undefined&#39; &amp;amp;&amp;amp; window.Vue) {
+      install(window.Vue)
+    }
+
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      assert(Vue, `must call Vue.use(Vuex) before creating a store instance.`)
+      assert(typeof Promise !== &#39;undefined&#39;, `vuex requires a Promise polyfill in this browser.`)
+      assert(this instanceof Store, `store must be called with the new operator.`)
+    }
+
+这段代码我们不做讨论，相信大家也知道什么意思
+    const {
+     //一个数组，包含应用在 store 上的插件方法。这些插件直接接收 store 作为唯一参数，可以监听 mutation（用于外部地数据持久化、记录或调试）或者提交 mutation （用于内部数据，例如 websocket 或 某些观察者）
+      plugins = [],
+        
+        
+      strict = false //使 Vuex store 进入严格模式，在严格模式下，任何 mutation 处理函数以外修改 Vuex state 都会抛出错误。
+    } = options
+
+上面这段代码，获取了我们传入的配置plugins和strict，上面代码中标注有每个属性的作用，关于详细的使用可以到官网查看，以后会有讲解
+    this._committing = false  
+    this._actions = Object.create(null) 
+    this._actionSubscribers = [] 
+
+    this._mutations = Object.create(null)  
+
+    this._wrappedGetters = Object.create(null)
+    this._modules = new ModuleCollection(options) 
+    this._modulesNamespaceMap = Object.create(null)
+    this._subscribers = []
+    this._watcherVM = new Vue()
+
+这些代码做了一些属性的初始化，我们暂且不看具体是干什么用的，关键是下面这段代码
+this._modules = new ModuleCollection(options) 
+
+看到这段代码，我们肯定能立马想到，我们传入的modules配置，我们来看看modules做了哪些初始化
+new ModuleCollection(options)
+  constructor (rawRootModule) {
+    this.register([], rawRootModule, false)
+  }
+
+这个类的构造函数只有简简单单的一行代码，它的参数rawRootModule,是我们给Vuex.Store(options)传入的完整的options,接下来看看register方法做了什么
+  register (path, rawModule, runtime = true) {
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      assertRawModule(path, rawModule)
+    }
+    // 创建Module对象，初始runtime为false
+    const newModule = new Module(rawModule, runtime)
+    if (path.length === 0) {
+      // this.root = new Module(rawModule, runtime)
+      this.root = newModule
+    } else {
+      // 如果path = [&#39;user&#39;, &#39;login&#39;]， path.slice(0, -1) = [&#39;user&#39;]   会去掉最后一个
+      // parent是根模块
+      const parent = this.get(path.slice(0, -1)) 
+      // 把模块添加到根Module对象的_children对象中，形式如下
+      // _children = {
+      //   user: new Module(user, runtime)
+      // }
+      parent.addChild(path[path.length - 1], newModule)
+    }
+    // 如果options中存在modules属性
+    if (rawModule.modules) {
+      // 遍历modules都西昂
+      forEachValue(rawModule.modules, (rawChildModule, key) =&amp;gt; {
+        // 获取每个module对应的options
+        /*{
+          modules: {
+            user: {
+              state,
+              mutations
+            },
+            login
+          },
+          state: {
+
+          },
+          mutations: {
+            
+          }
+        }*/
+
+        // 看到上面的形式，如果modules里有options,继续递归遍历， 
+        // path = [&#39;user&#39;, &#39;login&#39;]
+        this.register(path.concat(key), rawChildModule, runtime)
+      })
+    }
+  }
+
+const newModule = new Module(rawModule, runtime)
+
+代码一上来就创建了一个Module对象,并把options作为参数传入，我们继续看看Module这个类中做了哪些操作
+export default class Module {
+  constructor (rawModule, runtime) {
+    this.runtime = runtime
+    this._children = Object.create(null)
+    this._rawModule = rawModule
+    // 获取state
+    const rawState = rawModule.state
+
+    // 如果state是个方法就调用
+    this.state = (typeof rawState === &#39;function&#39; ? rawState() : rawState) || {}
+  }
+
+   // ...其他方法
+}
+
+
+上面的构造函数进行了一些初始化，this.runtime记录了是否是运行时，this._children初始化为空对象，它主要是用来，保存当前模块的子模块，this._rawModule记录了，当前模块的配置，然后又对state进行了些处理。然后我们大概知道了new Module做了什么
+
+创建了一个_children对象
+_rawModule记录模块配置
+
+其他并不是很重要，我们先不提，再回到new ModuleCollection(options),构造函数中
+const newModule = new Module(rawModule, runtime)
+
+这里拿到了Module对象
+    if (path.length === 0) {
+      // this.root = new Module(rawModule, runtime)
+      this.root = newModule
+    } else {
+      // 如果path = [&#39;user&#39;, &#39;login&#39;]， path.slice(0, -1) = [&#39;user&#39;]   会去掉最后一个
+      // parent是根模块
+      const parent = this.get(path.slice(0, -1)) 
+      // 把模块添加到根Module对象的_children对象中，形式如下
+      // _children = {
+      //   user: new Module(user, runtime)
+      // }
+      parent.addChild(path[path.length - 1], newModule)
+    }
+
+这是一段逻辑判断，而这个path是在ModuleCollection构造函数中,传入的,初始时为空
+this.register([], rawRootModule, false)  
+
+/**
+   * 
+   * @param {*} path 初始为空数组
+   * @param {*} rawModule options
+   * @param {*} runtime  初始为false
+   */
+  register (path, rawModule, runtime = true) {...}
+  
+  
+
+    if (path.length === 0) {
+      // this.root = new Module(rawModule, runtime)
+      this.root = newModule
+    } else {...}
+
+他把ModuleCollection对象的root属性设置为一个Module对象，也就是代表根module,而else中的逻辑我们暂时不看，因为后面会有递归，下个周期时会进入else分支
+    // 如果options中存在modules属性
+    if (rawModule.modules) {
+      // 遍历modules
+      forEachValue(rawModule.modules, (rawChildModule, key) =&amp;gt; {
+        // 获取每个module对应的options
+
+        /*{
+          modules: {
+            user: {
+              state,
+              mutations
+            },
+            login
+          },
+          state: {
+
+          },
+          mutations: {
+            
+          }
+        }*/
+
+        // 看到上面的形式，如果modules里有options,继续递归遍历， 
+        // path = [&#39;user&#39;, &#39;login&#39;]
+        this.register(path.concat(key), rawChildModule, runtime)
+      })
+    }
+
+这段代码，拿到了当前模块的配置，注意：根模块的配置其实就是options, 然后判断是否存在modules,如果存在，就遍历每个模块，这个forEachValue方法，其实实现非常简单，感兴趣的可以去看一下，最终回调函数遍历到每个module,并获取到module对象和它的模块对象的key,也就是模块名。
+之后再次调用了下register方法，递归执行
+this.register(path.concat(key), rawChildModule, runtime)
+
+注意：path.concat(key), path本来是空数组，在每次递归时都会拼接模块的名字，这段代码非常关键，后面的namespace会有用到
+然后我们再次回到register方法的开始
+    // 创建Module对象，初始runtime为false
+    const newModule = new Module(rawModule, runtime)
+      
+    if (path.length === 0) {
+      // this.root = new Module(rawModule, runtime)
+      this.root = newModule
+    } else {
+      // 如果path = [&#39;user&#39;, &#39;login&#39;]， path.slice(0, -1) = [&#39;user&#39;]   会去掉最后一个
+      // parent是根模块
+      const parent = this.get(path.slice(0, -1)) 
+      // 把模块添加到根Module对象的_children对象中，形式如下
+      // _children = {
+      //   user: new Module(user, runtime)
+      // }
+      parent.addChild(path[path.length - 1], newModule)
+    }
+
+依然是创建了Module对象，此时的Module已经是子Module了, if-else判断也会执行到else中
+    if (path.length === 0) {
+ 		//...
+    } else {
+      // 如果path = [&#39;user&#39;, &#39;login&#39;]， path.slice(0, -1) = [&#39;user&#39;]   会去掉最后一个
+      // parent是根模块
+      const parent = this.get(path.slice(0, -1)) 
+      // 把模块添加到根Module对象的_children对象中，形式如下
+      // _children = {
+      //   user: new Module(user, runtime)
+      // }
+      parent.addChild(path[path.length - 1], newModule)
+    }
+
+假如我们有两个module,它会获取到除了最后一个的所有module的key列表，并调用get方法
+  get (path) {
+    return path.reduce((module, key) =&amp;gt; {
+      // 获取子模块
+      return module.getChild(key)
+    }, this.root)
+  }
+
+这段是get方法的实现,它其实是返回path对应模块的子模块
+parent.addChild(path[path.length - 1], newModule)
+
+从最后，把模块添加到，当前模块的_children对象中
+  addChild (key, module) {
+    this._children[key] = module
+  }
+
+最后，通过ModuleCollection对象的root,就可以拿到Module对象树
+类似这样
+new Vuex.Store({
+	modules:{
+	    user: {
+	       modules:{
+               login
+           }
+	    },
+	    cart: {
+	        
+	    }
+	}
+})
+// 模拟一下
+ModuleCollection = {
+    root = 根Module: {
+            _children: {
+                子module(user): {
+                	_children: {
+                        子module(login)
+                    }
+                 },
+                子module(cart)
+            }
+        }
+}
+
+
+小总结：new ModuleCollection(options)在root这个属性上挂载了一个由module对象组成的树
+
+我们回到new Vuex.Store(options)时的构造函数
+this._modules = new ModuleCollection(options)
+
+this._modules拿到了模块的集合
+    // bind commit and dispatch to self
+    const store = this
+    const { dispatch, commit } = this
+    this.dispatch = function boundDispatch (type, payload) {
+      return dispatch.call(store, type, payload)
+    }
+    this.commit = function boundCommit (type, payload, options) {
+      return commit.call(store, type, payload, options)
+    }
+
+这段代码，重写了dispatch和commit方法，其实相当于调用了bind方法,我个人认为也可以改写成这样
+this.dispatch = this.dispatch.bind(store, type, payload)
+this.commit = this.commit.bind(store, type, payload)
+
+继续后面的步骤
+this.strict = strict
+
+strict使 Vuex store 进入严格模式，在严格模式下，任何 mutation 处理函数以外修改 Vuex state 都会抛出错误
+    // 根module的state属性
+    const state = this._modules.root.state
+
+保存根模块的state属性
+installModule(this, state, [], this._modules.root)
+
+这段代码虽然简短，但是非常重要，我们来具体分析installModule方法
+installModule
+/**
+ * 
+ * @param {*} store store对象
+ * @param {*} rootState 根module的state对象
+ * @param {*} path 初始为空数组
+ * @param {*} module 根module对象
+ * @param {*} hot 
+ */
+function installModule (store, rootState, path, module, hot) {
+	
+}
+
+它的参数如上
+  // 如果是空数组，说明是根module
+  const isRoot = !path.length
+
+判断是否是根模块
+  // 返回由module名字 拼接成的字符串
+  const namespace = store._modules.getNamespace(path)
+
+这段代码很有意思，我们来看下getNamespace方法，它在ModuleCollection类中
+  getNamespace (path) {
+    // 根module
+    let module = this.root
+
+    return path.reduce((namespace, key) =&amp;gt; {
+      // 获取子module
+      module = module.getChild(key)
+      // 如果模块的namespace存在， 举个列子： 一层模块 user/， 二层模块： user/login/
+      return namespace + (module.namespaced ? key + &#39;/&#39; : &#39;&#39;)
+    }, &#39;&#39;)
+  }
+
+直接做一个简单的例子，如果我们在每个模块中使用了namespaced，设置为true，当我们调用commit,dispatch等方法时，我们需要这样做
+this.$store.dispatch(&#39;count/increment&#39;)
+
+this.$store.commit(&#39;count/INCREMENT&#39;)
+
+getNamespace要做的其实就是获取到count/increment前面的count/,并返回
+  // 如果namespaced存在
+  if (module.namespaced) {
+    // 初始时store._modulesNamespaceMap[namespace]是不存在的
+    if (store._modulesNamespaceMap[namespace] &amp;amp;&amp;amp; process.env.NODE_ENV !== &#39;production&#39;) {
+      console.error(`[vuex] duplicate namespace ${namespace} for the namespaced module ${path.join(&#39;/&#39;)}`)
+    }
+    // namespace对应module
+    store._modulesNamespaceMap[namespace] = module
+  }
+
+这段代码做的事情，就是把namespace和module作为key,value保存在store对象的_modulesNamespaceMap属性上,关于这个属性在什么地方用，可以参考helper.js的getModuleByNamespace方法，这个方法是实现mapActions，mapMutations的关键，以后也会讲到
+然后是这段代码
+  // 如果不是根root module   ，初始时hot也不存在， 初始时hot为ture,所以不会执行下面的
+  if (!isRoot &amp;amp;&amp;amp; !hot) {
+    const parentState = getNestedState(rootState, path.slice(0, -1))
+    const moduleName = path[path.length - 1]
+    store._withCommit(() =&amp;gt; {
+      Vue.set(parentState, moduleName, module.state)
+    })
+  }
+
+isRoot想必不用多说，就是判断是否是根模块，而hot这个变量又是哪里来的呢，他是installModule方法传入的一个参数，初始时他是空的，但这又有什么用处呢；emmm,由于我自己很少用到，我就不多做详细介绍了（因为菜，所以没用过），具体用法官方文档有详细介绍
+我们继续，前面说到，hot是不存在的，而当前又是根节点，所以也不会执行这个if逻辑，但是我们还是要讲一下，不然一会还要回来讲，首先看一下getNestedState方法实现
+const parentState = getNestedState(rootState, path.slice(0, -1))
+
+// 具体实现
+function getNestedState (state, path) {
+  return path.length
+    ? path.reduce((state, key) =&amp;gt; state[key], state)
+    : state
+}
+
+
+首先它的第一个参数是state,也就是当前模块的state,注意不一定是rootState，不要被调用参数误解，实际上是递归引用的传递，这个函数就是判断当前path是否为空，如果为空，表示它是根模块的state,不为空表示为子模块的state，要注意的是path.slice(0, -1)，它获取了除了本身模块名之前的模块名数组，getNestedState函数直接来说就是用来获取父模块的state,从字面意思也可以理解，至于reduce的一些操作就不详细讲解了。
+const moduleName = path[path.length - 1]
+
+然后就是获取了当前模块名,接下来关键来了
+    store._withCommit(() =&amp;gt; {
+      Vue.set(parentState, moduleName, module.state)
+    })
+
+从字面意思，好像是跟随commit调用？没错就是这样。。
+  _withCommit (fn) {
+ 
+    const committing = this._committing
+    this._committing = true
+    fn()
+    // 重新设置之前的提交状态
+    this._committing = committing
+  }
+
+它就简单的调用了传入的回调函数，设置了前后的状态，然后来看下回调函数的内部
+parentState:父模块的state
+moduleName:当前模块名
+module.state:当前模块的state
+
+Vue.set(parentState, moduleName, module.state)
+
+关于Vue.set方法的介绍：向响应式对象中添加一个属性，并确保这个新属性同样是响应式的，且触发视图更新。它必须用于向响应式对象上添加新属性，因为 Vue 无法探测普通的新增属性
+也就是说，它可以在把每个state属性变为响应式，在commit之前，为什么在之前呢，因为这是初始化阶段，我们没有主动调用commit
+我们继续后面的代码
+  // 重写了dispatch, commit ,getter,state等方法，全部挂载到了当前模块的context属性上
+  const local = module.context = makeLocalContext(store, namespace, path)
+
+下面我将详细讲解makeLocalContext方法
+makeLocalContext
+function makeLocalContext (store, namespace, path) {
+  const noNamespace = namespace === &#39;&#39;
+
+  const local = {
+    // 如果不存在namespace，就重写dispatch方法
+    dispatch: noNamespace ? store.dispatch : (_type, _payload, _options) =&amp;gt; {
+      const args = unifyObjectStyle(_type, _payload, _options)
+      const { payload, options } = args
+      let { type } = args
+      if (!options || !options.root) {
+        // 使用namespace拼接action的类型
+        type = namespace + type
+        // 如果不使用 namespace/action的形式调用action就会报错
+        if (process.env.NODE_ENV !== &#39;production&#39; &amp;amp;&amp;amp; !store._actions[type]) {
+          console.error(`[vuex] unknown local action type: ${args.type}, global type: ${type}`)
+          return
+        }
+      }
+      return store.dispatch(type, payload)
+    },
+
+    commit: noNamespace ? store.commit : (_type, _payload, _options) =&amp;gt; {
+      const args = unifyObjectStyle(_type, _payload, _options)
+      const { payload, options } = args
+      let { type } = args
+      if (!options || !options.root) {
+        type = namespace + type
+        if (process.env.NODE_ENV !== &#39;production&#39; &amp;amp;&amp;amp; !store._mutations[type]) {
+          console.error(`[vuex] unknown local mutation type: ${args.type}, global type: ${type}`)
+          return
+        }
+      }
+      store.commit(type, payload, options)
+    }
+  }
+
+  // getters and state object must be gotten lazily
+  // because they will be changed by vm update
+  Object.defineProperties(local, {
+    getters: {
+      get: noNamespace
+        ? () =&amp;gt; store.getters
+        : () =&amp;gt; makeLocalGetters(store, namespace)
+    },
+    state: {
+      get: () =&amp;gt; getNestedState(store.state, path)
+    }
+  })
+
+  return local
+}
+
+这面代码返回了一个local对象，并且这些对象对dispatch,commit等方法还有state,getter进行了包装
+const noNamespace = namespace === &#39;&#39;
+
+这段代码用来判断是否存在命名空间namespace，然后我们再来看下dispatch
+1.dispatch
+    dispatch: noNamespace ? store.dispatch : (_type, _payload, _options) =&amp;gt; {
+      const args = unifyObjectStyle(_type, _payload, _options)
+      const { payload, options } = args
+      let { type } = args
+      if (!options || !options.root) {
+        // 使用namespace拼接action的类型
+        type = namespace + type
+        // 如果不使用 namespace/action的形式调用action就会报错
+        if (process.env.NODE_ENV !== &#39;production&#39; &amp;amp;&amp;amp; !store._actions[type]) {
+          console.error(`[vuex] unknown local action type: ${args.type}, global type: ${type}`)
+          return
+        }
+      }
+      return store.dispatch(type, payload)
+    },
+
+首先判断是否有命名空间，如果没有就是正常的dispatch,如果存在，则先统一对象风格unifyObjectStyle
+先来看下unifyObjectStyle实现,具体讲解就写在注释里了
+// 统一对象风格
+function unifyObjectStyle (type, payload, options) {
+    // 
+  if (isObject(type) &amp;amp;&amp;amp; type.type) {
+    options = payload
+    payload = type
+    type = type.type
+  }
+
+  if (process.env.NODE_ENV !== &#39;production&#39;) {
+    assert(typeof type === &#39;string&#39;, `expects string as the type, but found ${typeof type}.`)
+  }
+
+  return { type, payload, options }
+}
+
+在看这段代码之前，先说一下，一般来说我们都是这样使用dispatch
+store.dispatch(&#39;incrementAsync&#39;, {
+  amount: 10
+})
+
+但其实也可以这样,并且官方文档也有例子
+store.dispatch({
+  type: &#39;incrementAsync&#39;,
+  amount: 10
+})
+
+知道这些我们就继续往下分析
+  if (isObject(type) &amp;amp;&amp;amp; type.type) {
+    options = payload
+    payload = type
+    type = type.type
+  }
+
+这里是对参数进行了简单的处理，统一处理成了我们平常使用的模式，最后返回了相应的type, payload, options
+接下来，回到makeLocalContext方法
+    dispatch: noNamespace ? store.dispatch : (_type, _payload, _options) =&amp;gt; {
+      const args = unifyObjectStyle(_type, _payload, _options)
+      const { payload, options } = args
+      let { type } = args
+      if (!options || !options.root) {
+        // 使用namespace拼接action的类型
+        type = namespace + type
+        // 如果不使用 namespace/action的形式调用action就会报错
+        if (process.env.NODE_ENV !== &#39;production&#39; &amp;amp;&amp;amp; !store._actions[type]) {
+          console.error(`[vuex] unknown local action type: ${args.type}, global type: ${type}`)
+          return
+        }
+      }
+      return store.dispatch(type, payload)
+    },
+
+统一这些参数以后，又是一个if判断，第三个参数用的也很少，但是官方文档是有说明的，options 里可以有 root: true，它允许在命名空间模块里提交根的 mutation或action，然后返回了调用store.dispatch方法的返回值，然后我们来看看包装后的commit
+2.commit
+    commit: noNamespace ? store.commit : (_type, _payload, _options) =&amp;gt; {
+      const args = unifyObjectStyle(_type, _payload, _options)
+      const { payload, options } = args
+      let { type } = args
+      if (!options || !options.root) {
+        type = namespace + type
+        if (process.env.NODE_ENV !== &#39;production&#39; &amp;amp;&amp;amp; !store._mutations[type]) {
+          console.error(`[vuex] unknown local mutation type: ${args.type}, global type: ${type}`)
+          return
+        }
+      }
+      store.commit(type, payload, options)
+    }
+
+这段代码和dispatch的实现非常相似，就不讲解了，所做的事情就是对参数进行统一
+  Object.defineProperties(local, {
+    getters: {
+      get: noNamespace
+        ? () =&amp;gt; store.getters
+        : () =&amp;gt; makeLocalGetters(store, namespace)
+    },
+    state: {
+      get: () =&amp;gt; getNestedState(store.state, path)
+    }
+  })
+
+然后这段代码是把state和getter代理到了local对象上，
+3.getter
+判断当前模块是否有命名空间，如果不是，就不做任何处理，否则调用makeLocalGetters方法，并传入store对象和namespace完整模块字符串，至于这个namespace是什么，可以往前翻一翻，有具体的讲解。比如user/login，表示user模块下的login模块的namespace。然后我们来看看makeLocalGetters做了什么
+
+function makeLocalGetters (store, namespace) {
+  const gettersProxy = {}
+  const splitPos = namespace.length
+  Object.keys(store.getters).forEach(type =&amp;gt; {
+    // 截取getter中的namespace，如果不相等，就不做处理
+    if (type.slice(0, splitPos) !== namespace) return
+
+    // 获取getter 的namespace后面的字符串
+    const localType = type.slice(splitPos)
+
+
+    Object.defineProperty(gettersProxy, localType, {
+      // 把getters中的属性方法，代理到新的对象中
+      get: () =&amp;gt; store.getters[type],
+      enumerable: true
+    })
+  })
+
+  return gettersProxy
+}
+
+这个函数被调用说明一定是有namespace的，然后遍历getter，此时的getter的属性名是包含有namespace的，至于为什么会有，这个在以后的registerGetters中会有讲解。然后获取到namespace后面真实的getter属性名，并被代理到一个新的对象中，并且被获取时，仍然是使用了完整的namespace，举个例子
+假设模块:  user/todo
+store.getters.doSomething()   
+等价于
+store.getters[&#39;user/todo/doSomething&#39;]()
+
+看完这些相信大家都明白了
+4.state
+调用了getNestedState方法，这个方法想必不用多说，前面也有讲过，用来获取模块的父模块state，并返回
+我们再回到一开始，调用makeLocalContext的位置, 返回的local对象，最终放在了模块的context属性上
+const local = module.context = makeLocalContext(store, namespace, path)
+
+接下来我们继续分析，后面的内容
+registerMutation
+  // 遍历mutations
+  module.forEachMutation((mutation, key) =&amp;gt; {
+    // 把namespace和mutation名进行拼接
+    const namespacedType = namespace + key
+    registerMutation(store, namespacedType, mutation, local)
+  })
+
+这段代码，简单来说就是遍历了，当前模块的所有mutations，并对每个mutation调用了registerMutation方法，传入了store对象，完整的namespace + commit名，mutation函数,以及local对象，接下来看看registerMutation方法实现，至于forEachMutation方法，大家可以自己看一下，实现也很简单
+function registerMutation (store, type, handler, local) {
+  const entry = store._mutations[type] || (store._mutations[type] = [])
+  entry.push(function wrappedMutationHandler (payload) {
+    // 调用mutation, 并传入state和参数
+    handler.call(store, local.state, payload)
+  })
+}
+
+这个函数，实际上是把当前模块的mutation放在了一个_mutations对象中，那这个属性在哪定义的呢
+this._mutations = Object.create(null)
+
+实际上在Store类的构造函数的时候已经初始化为了一个空对象，registerMutation所做的事情，就是把mutations和namespaceType,形成一个映射关系，并且mutations是一个数组，比如这样
+{
+	&#39;user/todo/INCREMENT&#39;: [
+		function() {...}
+	]
+}
+
+这里之所以用数组的形式存储函数，我觉得是为了防止重复定义mutation，因为调用之后只有最后一个会生效
+  entry.push(function wrappedMutationHandler (payload) {
+    // 调用mutation, 并传入state和参数
+    handler.call(store, local.state, payload)
+  })
+
+然后就是把mutation的调用放在一个函数中，传入了state，payload，在真正调用commit的时候才会循环调用，真实的mutation
+下面我们继续看后面的代码
+registerAction
+  module.forEachAction((action, key) =&amp;gt; {
+    // namespace + type
+    const type = action.root ? key : namespace + key
+
+    const handler = action.handler || action
+    registerAction(store, type, handler, local)
+  })
+
+这里和前面的处理差不多，只是有个判断，如果action存在root说明是根模块，所以直接用key就好了,options 里可以有 root: true，它允许在命名空间模块里提交根的 mutation，否则就使用namespace和key拼接成的action名，然后我们来看registerAction是实现
+function registerAction (store, type, handler, local) {
+  const entry = store._actions[type] || (store._actions[type] = [])
+  entry.push(function wrappedActionHandler (payload, cb) {
+    let res = handler.call(store, {
+      dispatch: local.dispatch,
+      commit: local.commit,
+      getters: local.getters,
+      state: local.state,
+      rootGetters: store.getters,
+      rootState: store.state
+    }, payload, cb)
+    if (!isPromise(res)) {
+      res = Promise.resolve(res)
+    }
+      // 这是给devTool用的，可以不用关心
+    if (store._devtoolHook) {
+      return res.catch(err =&amp;gt; {
+        store._devtoolHook.emit(&#39;vuex:error&#39;, err)
+        throw err
+      })
+    } else {
+      return res
+    }
+  })
+}
+
+
+我们暂且不看wrappedActionHandler函数里面的内容，它的处理依旧和mutation的处理一样，也是把action放在_actions对象中，然后再看wrappedActionHandler里的内容，它调用了action,并且让他this指向了store,传入了，local对象中的dispatch,commit等方法还有state,getter,这不就是我们之前看到的，经过处理后的API方法吗。
+然后它拿到action调用之后的返回值，最终返回了一个Promise.resolve(res),也就是一个Promise
+通过上面这些代码，我们能在实际中这么用
+注意：commit, dispatch,getters,state都是当前模块里的方法和对象
+{
+	actions: {
+		async increment({ commit, dispatch, getters,state, rootGetters, rootState }) {
+		 	return await getData()
+		}
+	}
+}
+
+说完了registerAction，我们来说一说registerGetter
+registerGetter
+  module.forEachGetter((getter, key) =&amp;gt; {
+    const namespacedType = namespace + key
+    registerGetter(store, namespacedType, getter, local)
+  })
+
+不多废话，直接看registerGetter的实现
+function registerGetter (store, type, rawGetter, local) {
+  if (store._wrappedGetters[type]) {
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      console.error(`[vuex] duplicate getter key: ${type}`)
+    }
+    return
+  }
+  store._wrappedGetters[type] = function wrappedGetter (store) {
+    return rawGetter(
+      local.state, // local state
+      local.getters, // local getters
+      store.state, // root state
+      store.getters // root getters
+    )
+  }
+}
+
+一上来就是一个判断，简单点来说就是，不允许有重复定义的getters，我们之前是看到actions和mutation是可以重复定义的。然后再来看其他的，它和之前的处理有所不同，但也相差不大，因为不允许有重复，所以就不需要push一个函数了，直接调用了getter方法，传入了state,getters,根state,根getters，我们可以这样用
+{
+	[&#39;INCREMENT&#39;]: function(state, getters, rootState, rootGetters){
+		//...
+	}
+}
+
+讲完这些installModule基本上要结束了，我们看最后一段代码
+  module.forEachChild((child, key) =&amp;gt; {
+    installModule(store, rootState, path.concat(key), child, hot)
+  })
+
+没错，是个递归，它拿到了子模块进行了递归，大家可以翻到前面梳理一下流程
+installModule方法我们也讲完了，我们要回到Store类的构造函数中，看看还有些什么初始化操作
+resetStoreVM(this, state)
+
+plugins.forEach(plugin =&amp;gt; plugin(this))
+
+const useDevtools = options.devtools !== undefined ? options.devtools : Vue.config.devtools
+if (useDevtools) {
+   devtoolPlugin(this)
+}
+
+接下来分析resetStoreVM
+resetStoreVM
+function resetStoreVM (store, state, hot) {
+  const oldVm = store._vm
+  // bind store public getters
+  store.getters = {}
+  const wrappedGetters = store._wrappedGetters
+  const computed = {}
+  forEachValue(wrappedGetters, (fn, key) =&amp;gt; {
+    // use computed to leverage its lazy-caching mechanism
+    // direct inline function use will lead to closure preserving oldVm.
+    // using partial to return function with only arguments preserved in closure enviroment.
+    computed[key] = partial(fn, store)
+    Object.defineProperty(store.getters, key, {
+      get: () =&amp;gt; store._vm[key],
+      enumerable: true // for local getters
+    })
+  })
+
+  // use a Vue instance to store the state tree
+  // suppress warnings just in case the user has added
+  // some funky global mixins
+  const silent = Vue.config.silent
+  Vue.config.silent = true
+  store._vm = new Vue({
+    data: {
+      $$state: state
+    },
+    computed
+  })
+  Vue.config.silent = silent
+
+  // enable strict mode for new vm
+  if (store.strict) {
+    enableStrictMode(store)
+  }
+
+  if (oldVm) {
+    if (hot) {
+      // dispatch changes in all subscribed watchers
+      // to force getter re-evaluation for hot reloading.
+      store._withCommit(() =&amp;gt; {
+        oldVm._data.$$state = null
+      })
+    }
+    Vue.nextTick(() =&amp;gt; oldVm.$destroy())
+  }
+}
+
+首先看一下store._vm是什么，如果有注意到这个函数中间的一段代码的话可以看到，_vm是又创建了一个Vue实例，这个我们后面讲。然后在store上定义了一个对象getters，然后遍历之前，registerGetters注册的getter,然后是这段代码
+  forEachValue(wrappedGetters, (fn, key) =&amp;gt; {
+    // use computed to leverage its lazy-caching mechanism
+    // direct inline function use will lead to closure preserving oldVm.
+    // using partial to return function with only arguments preserved in closure enviroment.
+    computed[key] = partial(fn, store)
+    Object.defineProperty(store.getters, key, {
+      get: () =&amp;gt; store._vm[key],
+      enumerable: true // for local getters
+    })
+  })
+
+
+// partial函数实现
+export function partial (fn, arg) {
+  return function () {
+    return fn(arg)
+  }
+}
+
+首先是遍历所有getters,调用partial函数，返回了一个新函数，并把它放入computed对象中，后面的代码其实是做了这件事
+$store.getter
+等价于
+$store._vm.getter
+
+把getter代理到了一个新的Vue实例的computed对象上，这在后面的代码有所体现
+  const silent = Vue.config.silent
+  // 启动Vue的日志和警告
+  Vue.config.silent = true
+  store._vm = new Vue({
+    data: {
+      // 把state放在Vue的data中
+      $$state: state
+    },
+    computed  // 把所有getter放在了computed中
+  })
+
+这段代码相信不会陌生，vuex之所以能够响应式，原因就在这里，我们通过调用mutation,修改了state,会触发页面更新，其实是Vue的帮助
+strict
+我们继续看后面的代码
+  if (store.strict) {
+    enableStrictMode(store)
+  }
+
+  if (oldVm) {
+    if (hot) {
+     // 强制getters重新计算
+      store._withCommit(() =&amp;gt; {
+        oldVm._data.$$state = null
+      })
+    }
+    // 防止重复创建Vue实例（个人理解）
+    Vue.nextTick(() =&amp;gt; oldVm.$destroy())
+  }
+
+首先是判断strict是否为true, 表示是严格模式，如果直接更改state，会报错，我们看一下它的实现
+function enableStrictMode (store) {
+  store._vm.$watch(function () { return this._data.$$state }, () =&amp;gt; {
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      assert(store._committing, `do not mutate vuex store state outside mutation handlers.`)
+    }
+  }, { deep: true, sync: true })
+}
+
+很关键的是中间的箭头函数，我们可以直接看一下Vue源码的实现，它是如何实现修改state报错
+  Vue.prototype.$watch = function (
+    expOrFn: string | Function,
+    cb: any,
+    options?: Object
+  ): Function {
+    const vm: Component = this
+    if (isPlainObject(cb)) {
+      return createWatcher(vm, expOrFn, cb, options)
+    }
+    options = options || {}
+
+    options.user = true  // 很关键的属性
+
+    const watcher = new Watcher(vm, expOrFn, cb, options)
+
+    if (options.immediate) {
+      try {
+        cb.call(vm, watcher.value)
+      } catch (error) {
+        handleError(error, vm, `callback for immediate watcher &amp;quot;${watcher.expression}&amp;quot;`)
+      }
+    }
+    return function unwatchFn () {
+      watcher.teardown()
+    }
+  }
+
+这段代码有个地方很关键,options.user = true，它被传入了Watcher对象中，还有我们传入了箭头函数cb
+我们看看Watcher哪里有使用到user属性
+class Watcher {
+    
+  // ...
+    
+  update () {
+    /* istanbul ignore else */
+    if (this.lazy) {
+      this.dirty = true
+    } else if (this.sync) {
+      this.run()
+    } else {
+      queueWatcher(this)
+    }
+  }
+  run () {
+    if (this.active) {
+      const value = this.get()
+      if (
+        value !== this.value ||
+        // Deep watchers and watchers on Object/Arrays should fire even
+        // when the value is the same, because the value may
+        // have mutated.
+        isObject(value) ||
+        this.deep
+      ) {
+        // set new value
+        const oldValue = this.value
+        this.value = value
+        if (this.user) {
+          try {
+            this.cb.call(this.vm, value, oldValue)
+          } catch (e) {
+            handleError(e, this.vm, `callback for watcher &amp;quot;${this.expression}&amp;quot;`)
+          }
+        } else {
+          this.cb.call(this.vm, value, oldValue)
+        }
+      }
+    }
+  }
+    
+    // ...
+}
+
+
+
+我先说一下，这个run方法在什么时机调用的，它是在set属性访问器内部调用notify之后，watcher会调用自身的update方法,然后run就会被调用，可能说的不太清楚，如果各位有时间可以看一下，这里只针对strict原理来讲
+下面我们只看这段代码
+        if (this.user) {
+          try {
+            this.cb.call(this.vm, value, oldValue)
+          } catch (e) {
+            handleError(e, this.vm, `callback for watcher &amp;quot;${this.expression}&amp;quot;`)
+          }
+        } else {
+          this.cb.call(this.vm, value, oldValue)
+        }
+
+我们知道之前传入的user属性为true, 如果调用回调是一定会抛出错误的
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      assert(store._committing, `do not mutate vuex store state outside mutation handlers.`)
+    }
+
+这就是strict模式下，直接修改state会报错的原因
+讲完这些，其实后面的代码就简单略过了，也不是很重要（懒？）
+然后我们来看Store构造函数中最后一点内容
+    plugins.forEach(plugin =&amp;gt; plugin(this))
+
+    const useDevtools = options.devtools !== undefined ? options.devtools : Vue.config.devtools
+    if (useDevtools) {
+      devtoolPlugin(this)
+   }
+
+首先调用了所有的plugin,并传入了store对象，关于plugin的用法官方文档都有介绍。然后关于useDevtools内容我就不讲解了，它和devTool相关
+终于讲完了初始化，我们开始讲Vuex的一些API
+API
+我们按照官方文档一个个来
+1. commit
+​	commit的用法就不用介绍了，直接看源码
+  commit (_type, _payload, _options) {
+    // check object-style commit
+    const {
+      type,
+      payload,
+      options
+    } = unifyObjectStyle(_type, _payload, _options)
+
+    const mutation = { type, payload }
+    const entry = this._mutations[type]
+    if (!entry) {
+      if (process.env.NODE_ENV !== &#39;production&#39;) {
+        console.error(`[vuex] unknown mutation type: ${type}`)
+      }
+      return
+    }
+    this._withCommit(() =&amp;gt; {
+      // 遍历type对应的mutation数组
+      entry.forEach(function commitIterator (handler) {
+        handler(payload)
+      })
+    })
+    // 遍历所有订阅，并传入mutation对象和状态
+    this._subscribers.forEach(sub =&amp;gt; sub(mutation, this.state))
+
+    if (
+      process.env.NODE_ENV !== &#39;production&#39; &amp;amp;&amp;amp;
+      options &amp;amp;&amp;amp; options.silent
+    ) {
+      console.warn(
+        `[vuex] mutation type: ${type}. Silent option has been removed. ` +
+        &#39;Use the filter functionality in the vue-devtools&#39;
+      )
+    }
+  }
+
+首先是调用unifyObjectStyle方法，统一对象风格，如果有看前面的内容的话，应该知道，这是用来处理以下两种情况的参数
+commit(type: string, payload?: any, options?: Object)
+commit(mutation: Object, options?: Object)
+
+然后是下面这段
+    const mutation = { type, payload }
+    const entry = this._mutations[type]
+    if (!entry) {
+      if (process.env.NODE_ENV !== &#39;production&#39;) {
+        console.error(`[vuex] unknown mutation type: ${type}`)
+      }
+      return
+    }
+
+如果commit的mutation不存在的话，就会报出警告,并返回不做处理
+    this._withCommit(() =&amp;gt; {
+      // 遍历type对应的mutation数组
+      entry.forEach(function commitIterator (handler) {
+        handler(payload)
+      })
+    })
+
+_withCommit方法前面也有讲过，简单点说其实就是调用传入的回调函数，这里循环调用了mutation，至于为什么是数组，前面有讲到，是在registerMutation方法
+我们继续来看
+    // 遍历所有订阅，并传入mutation对象和状态
+    this._subscribers.forEach(sub =&amp;gt; sub(mutation, this.state))
+    
+    //  silent属性已经被删除，不让使用
+    if (
+      process.env.NODE_ENV !== &#39;production&#39; &amp;amp;&amp;amp;
+      options &amp;amp;&amp;amp; options.silent
+    ) {
+      console.warn(
+        `[vuex] mutation type: ${type}. Silent option has been removed. ` +
+        &#39;Use the filter functionality in the vue-devtools&#39;
+      )
+    }
+
+this._subscribers属性也是在Store对象的构造函数初始化时创建的一个数组，看到这个数组的名字，不用多说肯定是发布订阅模式，然后循环调用订阅的回调函数,它是在mutation被调用后执行, 但是在哪里订阅的呢，其实是在subscribe方法，它也是Vuex的一个API，下面我们来具体讲讲
+2. subscribe
+订阅 store 的 mutation。handler 会在每个 mutation完成后调用，接收 mutation 和经过 mutation 后的状态作为参数
+  subscribe (fn) {
+    return genericSubscribe(fn, this._subscribers)
+  }
+
+function genericSubscribe (fn, subs) {
+  if (subs.indexOf(fn) &amp;lt; 0) {
+    subs.push(fn)
+  }
+  return () =&amp;gt; {
+    const i = subs.indexOf(fn)
+    if (i &amp;gt; -1) {
+      subs.splice(i, 1)
+    }
+  }
+}
+
+这就是一个简单的发布订阅模式的应用，把回调存储在了订阅数组中，其中genericSubscribe方法利用了闭包，返回了一个函数，调用它之后就可以取消订阅,其实还有其他的订阅方法,subscribeAction
+3. subscribeAction
+  subscribeAction (fn) {
+    const subs = typeof fn === &#39;function&#39; ? { before: fn } : fn
+    return genericSubscribe(subs, this._actionSubscribers)
+  }
+
+判断是否是一个函数，如果是默认为before函数，也就是在dispatch调用action之前调用，如果是{after: fn}就会在action之后调用
+4. dispatch
+  // 执行了beforeActions所有回调
+  // 执行所有actions,并拿到所有promise返回的结果
+  // 执行了afterActions所有回调
+  dispatch (_type, _payload) {
+    // check object-style dispatch
+    const {
+      type,
+      payload
+    } = unifyObjectStyle(_type, _payload)
+
+    const action = { type, payload }
+    const entry = this._actions[type]
+    if (!entry) {
+      if (process.env.NODE_ENV !== &#39;production&#39;) {
+        console.error(`[vuex] unknown action type: ${type}`)
+      }
+      return
+    }
+
+    try {
+      this._actionSubscribers
+        .filter(sub =&amp;gt; sub.before)
+        .forEach(sub =&amp;gt; sub.before(action, this.state))
+    } catch (e) {
+      if (process.env.NODE_ENV !== &#39;production&#39;) {
+        console.warn(`[vuex] error in before action subscribers: `)
+        console.error(e)
+      }
+    }
+
+    const result = entry.length &amp;gt; 1
+      ? Promise.all(entry.map(handler =&amp;gt; handler(payload)))
+      : entry[0](payload)
+
+    return result.then(res =&amp;gt; {
+      try {
+        this._actionSubscribers
+          .filter(sub =&amp;gt; sub.after)
+          .forEach(sub =&amp;gt; sub.after(action, this.state))
+      } catch (e) {
+        if (process.env.NODE_ENV !== &#39;production&#39;) {
+          console.warn(`[vuex] error in after action subscribers: `)
+          console.error(e)
+        }
+      }
+      return res
+    })
+  }
+
+前面关于对象统一，以及是否存在action的判断就不讲了
+    try {
+      this._actionSubscribers
+        .filter(sub =&amp;gt; sub.before)
+        .forEach(sub =&amp;gt; sub.before(action, this.state))
+    } catch (e) {
+      if (process.env.NODE_ENV !== &#39;production&#39;) {
+        console.warn(`[vuex] error in before action subscribers: `)
+        console.error(e)
+      }
+    }
+
+然后过滤筛选获取到了订阅的一些before函数,也就是在调用action之前调用，并传入了action, action = { type, payload }以及state
+5. watch
+响应式地侦听 fn 的返回值，当值改变时调用回调函数。fn 接收 store 的 state 作为第一个参数，其 getter 作为第二个参数。最后接收一个可选的对象参数表示 Vue 的 vm.$watch 方法的参数。
+  watch (getter, cb, options) {
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      assert(typeof getter === &#39;function&#39;, `store.watch only accepts a function.`)
+    }
+    return this._watcherVM.$watch(() =&amp;gt; getter(this.state, this.getters), cb, options)
+  }
+
+// Store构造函数初始化时
+this._watcherVM = new Vue()
+
+这里给侦听函数里的，getter传入了state和getters, 当state发生变化时，侦听函数的返回值也发生了变化，值改变后就会触发cb回调函数, 关于vm.$watch的用法，可以参考Vue的官方文档vm.$watch
+6. replaceState
+替换 store 的根状态，仅用状态合并或时光旅行调试。
+    this._withCommit(() =&amp;gt; {
+      this._vm._data.$$state = state
+    })
+
+直接替换掉了$$state原本状态
+7. registerModule
+可以注册模块，例子：
+// 注册模块 `myModule`
+store.registerModule(&#39;myModule&#39;, {
+  // ...
+})
+// 注册嵌套模块 `nested/myModule`
+store.registerModule([&#39;nested&#39;, &#39;myModule&#39;], {
+  // ...
+})
+
+  registerModule (path, rawModule, options = {}) {
+    if (typeof path === &#39;string&#39;) path = [path]
+
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      assert(Array.isArray(path), `module path must be a string or an Array.`)
+      assert(path.length &amp;gt; 0, &#39;cannot register the root module by using registerModule.&#39;)
+    }
+
+    this._modules.register(path, rawModule)
+    installModule(this, this.state, path, this._modules.get(path), options.preserveState)
+    // reset store to update getters...
+    resetStoreVM(this, this.state)
+  }
+
+首先时统一处理了一下path和一些断言，然后调用了register方法installModule方法，resetStoreVM方法，这几个方法前面都有讲到，相当于又创建了一个Store对象，流程也差不多
+8. unregisterModule
+卸载一个动态模块。
+  unregisterModule (path) {
+    if (typeof path === &#39;string&#39;) path = [path]
+    if (process.env.NODE_ENV !== &#39;production&#39;) {
+      assert(Array.isArray(path), `module path must be a string or an Array.`)
+    }
+
+    this._modules.unregister(path)
+    this._withCommit(() =&amp;gt; {
+      const parentState = getNestedState(this.state, path.slice(0, -1))
+      Vue.delete(parentState, path[path.length - 1])
+    })
+    resetStore(this)
+  }
+
+前面是对path模块名进行了处理以及断言是否是数组，然后调用unregister
+this._modules.unregister(path)
+
+
+unregister (path) {
+    const parent = this.get(path.slice(0, -1))
+    const key = path[path.length - 1]
+    if (!parent.getChild(key).runtime) return
+
+    parent.removeChild(key)
+}
+
+这里获取到了传入模块名，也就是path的父模块，然后获取子模块判断是否存在runtime属性，这个属性是干嘛的，我也不是很清楚，希望又大佬解惑（菜 ！- -,没办法啊）
+  parent.removeChild(key)
+
+  removeChild (key) {
+    delete this._children[key]
+  }
+
+最后删除了子模块,也就是我们要删除的模块
+9. hotUpdate
+热替换新的 action 和 mutation
+官方的例子
+// store.js
+import Vue from &#39;vue&#39;
+import Vuex from &#39;vuex&#39;
+import mutations from &#39;./mutations&#39;
+import moduleA from &#39;./modules/a&#39;
+
+Vue.use(Vuex)
+
+const state = { ... }
+
+const store = new Vuex.Store({
+  state,
+  mutations,
+  modules: {
+    a: moduleA
+  }
+})
+
+if (module.hot) {
+  // 使 action 和 mutation 成为可热重载模块
+  module.hot.accept([&#39;./mutations&#39;, &#39;./modules/a&#39;], () =&amp;gt; {
+    // 获取更新后的模块
+    // 因为 babel 6 的模块编译格式问题，这里需要加上 `.default`
+    const newMutations = require(&#39;./mutations&#39;).default
+    const newModuleA = require(&#39;./modules/a&#39;).default
+    // 加载新模块
+    store.hotUpdate({
+      mutations: newMutations,
+      modules: {
+        a: newModuleA
+      }
+    })
+  })
+}
+
+热模块更新源码如下
+  hotUpdate (newOptions) {
+    this._modules.update(newOptions)
+    resetStore(this, true)
+  }
+
+this._modules.update(newOptions)方法是在module-collection.js文件中定义
+  update (rawRootModule) {
+    update([], this.root, rawRootModule)
+  }
+
+
+function update (path, targetModule, newModule) {
+  if (process.env.NODE_ENV !== &#39;production&#39;) {
+    assertRawModule(path, newModule)
+  }
+
+  // update target module
+  targetModule.update(newModule)
+
+  // update nested modules
+  if (newModule.modules) {
+    for (const key in newModule.modules) {
+       // 如果传入的配置中没有该模块就报错
+      if (!targetModule.getChild(key)) {
+        if (process.env.NODE_ENV !== &#39;production&#39;) {
+          console.warn(
+            `[vuex] trying to add a new module &#39;${key}&#39; on hot reloading, ` +
+            &#39;manual reload is needed&#39;
+          )
+        }
+        return
+      }
+      update(
+        path.concat(key),
+        targetModule.getChild(key),
+        newModule.modules[key]
+      )
+    }
+  }
+}
+
+
+以上代码总的来说就是递归遍历模块，并更新模块，其中涉及到三个update方法，大家不要弄混。
+update([], this.root, rawRootModule)
+
+主要传入了，一个空数组，原本的根模块对象，要用来替换的模块配置
+function update (path, targetModule, newModule) {
+  if (process.env.NODE_ENV !== &#39;production&#39;) {
+    assertRawModule(path, newModule)
+  }
+
+  // update target module
+  targetModule.update(newModule)
+
+  // update nested modules
+  if (newModule.modules) {
+    for (const key in newModule.modules) {
+       // 如果传入的配置中没有该模块就报错
+      if (!targetModule.getChild(key)) {
+        if (process.env.NODE_ENV !== &#39;production&#39;) {
+          console.warn(
+            `[vuex] trying to add a new module &#39;${key}&#39; on hot reloading, ` +
+            &#39;manual reload is needed&#39;
+          )
+        }
+        return
+      }
+      update(
+        path.concat(key),
+        targetModule.getChild(key),
+        newModule.modules[key]
+      )
+    }
+  }
+
+递归遍历，原本的模块树，使用新模块替换掉原本模块
+以上代码中还有一个模块中的update方法,即targetModule.update(newModule)
+// update target module
+targetModule.update(newModule)
+
+// module.js
+update (rawModule) {
+    this._rawModule.namespaced = rawModule.namespaced
+    if (rawModule.actions) {
+      this._rawModule.actions = rawModule.actions
+    }
+    if (rawModule.mutations) {
+      this._rawModule.mutations = rawModule.mutations
+    }
+    if (rawModule.getters) {
+      this._rawModule.getters = rawModule.getters
+    }
+  }
+
+这个方法其实很简单，替换掉了原本的模块。
+辅助函数
+mapXXX方法都在helper.js文件中
+// helper.js
+export const mapState = normalizeNamespace((namespace, states) =&amp;gt; {
+  //..
+})
+
+export const mapMutations = normalizeNamespace((namespace, mutations) =&amp;gt; {
+  // ..
+})
+// ...
+
+可以看到他们都调用了normalizeNamespace方法，我们知道mapXxx是一个方法，所以它一定会返回一个方法
+function normalizeNamespace (fn) {
+  return (namespace, map) =&amp;gt; {
+    if (typeof namespace !== &#39;string&#39;) {
+      map = namespace
+      namespace = &#39;&#39;
+    } else if (namespace.charAt(namespace.length - 1) !== &#39;/&#39;) {
+      namespace += &#39;/&#39;
+    }
+    return fn(namespace, map)
+  }
+}
+
+这个方法实际上是对参数进行了处理，判断如果namespace不是字符串，也就是说它可能不存在，namespace就设置为一个空字符串，比如这样
+{
+	computed: {
+		...mapState([&#39;username&#39;])
+	}
+}
+
+如果传入了namespace字符串，并且最后没有斜杠，就自动帮它加上，最后才是调用真实的mapXXX，比如这样
+{
+	computed: {
+		...mapState(&#39;user/&#39;, [&#39;username&#39;])
+	}
+}
+
+接下来我们看一下mapState实现
+mapState
+export const mapState = normalizeNamespace((namespace, states) =&amp;gt; {
+  const res = {}
+  normalizeMap(states).forEach(({ key, val }) =&amp;gt; {
+    res[key] = function mappedState () {
+      let state = this.$store.state
+      let getters = this.$store.getters
+      if (namespace) {
+        const module = getModuleByNamespace(this.$store, &#39;mapState&#39;, namespace)
+        if (!module) {
+          return
+        }
+        state = module.context.state
+        getters = module.context.getters
+      }
+      return typeof val === &#39;function&#39;
+        ? val.call(this, state, getters)
+        : state[val]
+    }
+    // mark vuex getter for devtools
+    res[key].vuex = true
+  })
+  return res
+})
+
+首先又是调用了一个normalizeMap方法，传入了我们需要获取的states,normalizeMap实现如下
+function normalizeMap (map) {
+  return Array.isArray(map)
+    ? map.map(key =&amp;gt; ({ key, val: key }))
+    : Object.keys(map).map(key =&amp;gt; ({ key, val: map[key] }))
+}
+
+这段代码看起来可能有点复杂，举个例子
+normalizeMap([1, 2, 3]) =&amp;gt; [ { key: 1, val: 1 }, { key: 2, val: 2 }, { key: 3, val: 3 } ]
+normalizeMap([&#39;user&#39;, &#39;count&#39;]) =&amp;gt; [ { key: &#39;user&#39;, val: &#39;user&#39; }, { key: &#39;count&#39;, val: &#39;count&#39; }]
+
+normalizeMap({a: 1, b: 2, c: 3}) =&amp;gt; [ { key: &#39;a&#39;, val: 1 }, { key: &#39;b&#39;, val: 2 }, { key: &#39;c&#39;, val: 3 } ]
+
+然后我们回到之前的代码
+export const mapState = normalizeNamespace((namespace, states) =&amp;gt; {
+  const res = {}
+  normalizeMap(states).forEach(({ key, val }) =&amp;gt; {
+    res[key] = function mappedState () {
+      let state = this.$store.state
+      let getters = this.$store.getters
+      if (namespace) {
+        const module = getModuleByNamespace(this.$store, &#39;mapState&#39;, namespace)
+        if (!module) {
+          return
+        }
+        state = module.context.state
+        getters = module.context.getters
+      }
+      return typeof val === &#39;function&#39;
+        ? val.call(this, state, getters)
+        : state[val]
+    }
+    // mark vuex getter for devtools
+    res[key].vuex = true
+  })
+  return res
+})
+
+细心的童鞋可能注意到了，整个mapState返回的是一个对象，其形式如下，其他mapMutations,mapActions都可以这样
+mapState(&#39;user&#39;, [&#39;username&#39;, &#39;password&#39;])
+
+{
+	username: function(){},
+	password: function(){}
+}
+
+mapMutation(&#39;count&#39;, [&#39;increment&#39;])
+
+现在知道为啥mapState要写在computed里了吧！原因就在这里。为了方便我就直接用注释分析了
+    res[key] = function mappedState () {
+      // store对象中的state,这个state是根state 
+      let state = this.$store.state
+      // 根getters
+      let getters = this.$store.getters
+      // 如果传入了namespace
+      if (namespace) {
+        // 调用getModuleByNamespace方法，源码实现在下方,它返回namespace对应的模块
+        const module = getModuleByNamespace(this.$store, &#39;mapState&#39;, namespace)
+        if (!module) {
+          return
+        }
+        // 有看过前面源码应该记得，很多方法和对象都挂载到了context属性上
+        state = module.context.state
+        getters = module.context.getters
+      }
+      // 调用val或获取state
+      return typeof val === &#39;function&#39;
+        ? val.call(this, state, getters)
+        : state[val]
+    }
+    // mark vuex getter for devtools
+    res[key].vuex = true
+  })
+
+function getModuleByNamespace (store, helper, namespace) {
+   // _modulesNamespaceMap属性是不是很眼熟？
+   // 它是在Store类的installModule方法中使用到，记录了namespace对应的module 
+  const module = store._modulesNamespaceMap[namespace]
+  if (process.env.NODE_ENV !== &#39;production&#39; &amp;amp;&amp;amp; !module) {
+    console.error(`[vuex] module namespace not found in ${helper}(): ${namespace}`)
+  }
+  return module
+}
+
+上面这些代码有几个注意点
+
+
+getModuleByNamespace方法中的store._modulesNamespaceMap[namespace]是在installModules中进行的初始化
+
+
+mapState是可以传入回调函数的
+{
+  computed: mapState({
+    // 箭头函数可使代码更简练
+    count: state =&amp;gt; state.count,
+
+    // 传字符串参数 &#39;count&#39; 等同于 `state =&amp;gt; state.count`
+    countAlias: &#39;count&#39;,
+
+    // 为了能够使用 `this` 获取局部状态，必须使用常规函数
+    countPlusLocalState (state) {
+      return state.count + this.localCount
+    }
+  })
+}
+
+
+
+mapMutations
+export const mapMutations = normalizeNamespace((namespace, mutations) =&amp;gt; {
+  const res = {}
+  normalizeMap(mutations).forEach(({ key, val }) =&amp;gt; {
+    res[key] = function mappedMutation (...args) {
+      // Get the commit method from store
+      let commit = this.$store.commit
+      if (namespace) {
+        const module = getModuleByNamespace(this.$store, &#39;mapMutations&#39;, namespace)
+        if (!module) {
+          return
+        }
+        commit = module.context.commit
+      }
+      return typeof val === &#39;function&#39;
+        ? val.apply(this, [commit].concat(args))
+        : commit.apply(this.$store, [val].concat(args))
+    }
+  })
+  return res
+})
+
+其他相同的代码就不讲了，关键看下面的
+    res[key] = function mappedMutation (...args) {
+      // Get the commit method from store
+      let commit = this.$store.commit
+      if (namespace) {
+        const module = getModuleByNamespace(this.$store, &#39;mapMutations&#39;, namespace)
+        if (!module) {
+          return
+        }
+        commit = module.context.commit
+      }
+      return typeof val === &#39;function&#39;
+        ? val.apply(this, [commit].concat(args))
+        : commit.apply(this.$store, [val].concat(args))
+    }
+
+这段代码其实和mapState里的相差不大，都是获取到commit,如果有namespace就获取模块里的commit,最后调用commit,它也可以传入一个回调函数,不过，举个例子
+methods: {
+	...mapMutations([&#39;increment&#39;]),
+	//等价于
+	...mapMutations({
+		add: function(commit, ...args){
+		   commit(&#39;increment&#39;, ...args)
+	    }
+	}),
+     // 等价于
+    ...mapMutations({
+      add: &#39;increment&#39; // 将 `this.add()` 映射为 `this.$store.commit(&#39;increment&#39;)`
+    })
+}
+// 组件中调用
+this.add(1)
+
+mapGetters
+export const mapGetters = normalizeNamespace((namespace, getters) =&amp;gt; {
+  const res = {}
+  normalizeMap(getters).forEach(({ key, val }) =&amp;gt; {
+    // The namespace has been mutated by normalizeNamespace
+    val = namespace + val
+    res[key] = function mappedGetter () {
+        // 如果namespace存在但是没有找到对应的模块 就直接返回，不做处理
+      if (namespace &amp;amp;&amp;amp; !getModuleByNamespace(this.$store, &#39;mapGetters&#39;, namespace)) {
+        return
+      }
+      // 如果没有找到对应的getter会报错并返回
+      if (process.env.NODE_ENV !== &#39;production&#39; &amp;amp;&amp;amp; !(val in this.$store.getters)) {
+        console.error(`[vuex] unknown getter: ${val}`)
+        return
+      }
+      
+      return this.$store.getters[val]
+    }
+    // mark vuex getter for devtools
+    res[key].vuex = true
+  })
+  return res
+})
+
+mapGetters和其它实现有所区别
+
+
+所有模块的getters都被代理在store对象中，所以直接使用getter的key和namespace拼接获取到对应的getter；具体在哪代理可以参见
+// store.js 的makeLocalContext方法里的实现
+Object.defineProperties(local, {
+    getters: {
+      get: noNamespace
+        ? () =&amp;gt; store.getters
+        : () =&amp;gt; makeLocalGetters(store, namespace)
+    },
+    state: {
+      get: () =&amp;gt; getNestedState(store.state, path)
+    }
+  })
+
+
+
+getter不支持传入函数
+
+
+mapActions
+export const mapActions = normalizeNamespace((namespace, actions) =&amp;gt; {
+  const res = {}
+  normalizeMap(actions).forEach(({ key, val }) =&amp;gt; {
+    res[key] = function mappedAction (...args) {
+      // get dispatch function from store
+      let dispatch = this.$store.dispatch
+      if (namespace) {
+        const module = getModuleByNamespace(this.$store, &#39;mapActions&#39;, namespace)
+        if (!module) {
+          return
+        }
+        dispatch = module.context.dispatch
+      }
+      return typeof val === &#39;function&#39;
+        ? val.apply(this, [dispatch].concat(args))
+        : dispatch.apply(this.$store, [val].concat(args))
+    }
+  })
+  return res
+})
+
+mapActions的实现和mutation的实现一模一样？确实是这样。。。下面只说下用法
+methods: {
+	...mapActions([&#39;increment&#39;]),
+	//等价于
+	...mapActions({
+		add: function(dispatch, ...args){
+		   dispatch(&#39;increment&#39;, ...args)
+	    }
+	}),
+     // 等价于
+    ...mapActions({
+      add: &#39;increment&#39; // 将 `this.add()` 映射为 `this.$store.dispatch(&#39;increment&#39;)`
+    })
+}
+// 组件中调用
+this.add(1)
+
+createNamespacedHelpers
+export const createNamespacedHelpers = (namespace) =&amp;gt; ({
+  mapState: mapState.bind(null, namespace),
+  mapGetters: mapGetters.bind(null, namespace),
+  mapMutations: mapMutations.bind(null, namespace),
+  mapActions: mapActions.bind(null, namespace)
+})
+
+官方例子
+import { createNamespacedHelpers } from &#39;vuex&#39;
+
+const { mapState, mapActions } = createNamespacedHelpers(&#39;some/nested/module&#39;)
+
+export default {
+  computed: {
+    // 在 `some/nested/module` 中查找
+    ...mapState({
+      a: state =&amp;gt; state.a,
+      b: state =&amp;gt; state.b
+    })
+  },
+  methods: {
+    // 在 `some/nested/module` 中查找
+    ...mapActions([
+      &#39;foo&#39;,
+      &#39;bar&#39;
+    ])
+  }
+}
+
+对于这个createNamespacedHelpers如何实现，我想大家应该看的懂吧
+总结
+终于分析完了Vuex的源码，完成这篇文章也是没事抽出空闲时间写出来的，可能会有错别字，分析错误或者有些我不知道的，欢迎大家指正，阅读源码也使我学到了很多东西，让我从陌生，逐渐开始得心应手，一直到现在，我对于源码不再是单纯的为了面试，而是一种兴趣，谢谢大家观看
+下一章
+逐行级源码分析系列(二) Redux和React-Redux源码（正在写作）
+未完待续。。。
+
+                                        </div>
+                                        
+                                            <a class="btn btn-text" href="https://1131153523.github.io/post/zhu-xing-ji-yuan-ma-fen-xi-xi-lie-yi-vuex/">Read More ~</a>
+                            </div>
+                </div>
+            </article>
+            
+                <!-- 翻页 -->
+                
+                </div>
+                <!--  -->
+                <div class="main-container-middle"></div>
+                <!--  -->
+                <div id="sidebar" class="main-container-right">
+
+                    <!-- 个人信息 -->
+                    
+    <div class="id_card i-card">
+        <div class="id_card-avatar" style="background-image: url(https://1131153523.github.io/images/avatar.png?v=1583153064508)">
+        </div>
+        <h1 class="id_card-title">
+            
+        </h1>
+        <h2 class="id_card-description">
+            温故而知新
+        </h2>
+        <!--  -->
+        <div class="id_card-sns">
+            <!-- github -->
+            
+                <a href="https://github.com/1131153523" target="_blank" rel="noopener noreferrer"><i
+                class="fa fa-github"></i></a>
+                
+                    <!-- twitter -->
+                    
+                            <!-- weibo -->
+                            
+                                    <!-- facebook -->
+                                    
+
+        </div>
+    </div>
+    
+
+                        <!-- 公告栏 -->
+                        
+
+                </div>
+            </div>
+
+
+
+            <div class="site-footer">
    | 
   <a class="rss" href="https://1131153523.github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
 <script>
   hljs.initHighlightingOnLoad()
-
-  let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
-
-  // This should probably be throttled.
-  // Especially because it triggers during smooth scrolling.
-  // https://lodash.com/docs/4.17.10#throttle
-  // You could do like...
-  // window.addEventListener("scroll", () => {
-  //    _.throttle(doThatStuff, 100);
-  // });
-  // Only not doing it here to keep this Pen dependency-free.
-
-  window.addEventListener("scroll", event => {
-    let fromTop = window.scrollY;
-
-    mainNavLinks.forEach((link, index) => {
-      let section = document.getElementById(decodeURI(link.hash).substring(1));
-      let nextSection = null
-      if (mainNavLinks[index + 1]) {
-        nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-      }
-      console.log('section.offsetHeight', section.offsetHeight);
-      if (section.offsetTop <= fromTop) {
-        if (nextSection) {
-          if (nextSection.offsetTop > fromTop) {
-            link.classList.add("current");
-          } else {
-            link.classList.remove("current");    
-          }
-        } else {
-          link.classList.add("current");
-        }
-      } else {
-        link.classList.remove("current");
-      }
-    });
-  });
-
 </script>
 
-      </div>
     </div>
-  </body>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+</body>
+
 </html>
